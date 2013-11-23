@@ -69,10 +69,49 @@ public class Planet : MonoBehaviour {
 		peopleComingToMe.Add(people);
 	}
 	
+	public float rayDistance = 100;
+	public LayerMask rayMask;
+	bool mouseTouchMe()
+	{
+		RaycastHit hit;
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		
+		if (Physics.Raycast(ray, out hit, rayDistance, rayMask.value))
+		{
+			if (hit.collider.gameObject.GetComponent<Planet>().id == id)
+				return true;
+			return false;
+		}
+		return false;
+	}
+	
 	
 	
 	void Update()
 	{
+		
+		if (Input.GetMouseButtonDown(0))
+		{
+			if (mouseTouchMe())
+			{
+				if (selected == null)
+					selected = this;
+			}
+			
+		}
+		else if (Input.GetMouseButton(0))
+		{
+			if (mouseTouchMe() && !selected)
+			{
+				selected.sendPeopleTo(this);	
+			}
+		}
+		else if (Input.GetMouseButtonUp(0))
+		{
+			selected.onDeselect();
+			selected = null;
+		}
+		/*
 		if (Input.GetKeyDown(letter))
 		{
 			if (selected == null)
@@ -131,17 +170,24 @@ public class Planet : MonoBehaviour {
 		{
 			percentText.text = Mathf.Floor(_percentPeople) + "%";
 		}
+		*/
 	}
 	
 	public void onDeselect()
 	{
-		percentText.gameObject.SetActive(false);
+		if (percentText)
+			percentText.gameObject.SetActive(false);
 		_percentPeople = 0;
 	}
 	
+	public int nbrPeopleSentPerRate;
+	public float sendRate = 1;
+	
 	public void sendPeopleTo(Planet objectiv)
 	{
-		int nbrPeople = Mathf.FloorToInt(_people * (_percentPeople / 100));
+		
+		//int nbrPeople = Mathf.FloorToInt(_people * (_percentPeople / 100));
+		int nbrPeople = nbrPeopleSentPerRate;
 		for (int i = 0; i < nbrPeople; ++i)
 		{
 			Vector3 direction = objectiv.transform.position - transform.position;

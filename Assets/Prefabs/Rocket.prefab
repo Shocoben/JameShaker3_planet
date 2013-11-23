@@ -142,6 +142,10 @@ MonoBehaviour:
   maxStrength: 5
   maxTime: 2
   timed: 1
+  letterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
+  controlsWhenFree: 0
+  fbx: {fileID: 100002}
+  showNumber: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

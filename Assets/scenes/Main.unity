@@ -131,6 +131,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
+  rayDistance: 100
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 0
+  nbrPeopleSentPerRate: 0
+  sendRate: 1
   ratio: .25
   attachedRockets: []
 --- !u!114 &68897036
@@ -418,6 +424,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
+  rayDistance: 100
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 0
+  nbrPeopleSentPerRate: 0
+  sendRate: 1
   ratio: .25
   attachedRockets: []
 --- !u!114 &187401195
@@ -770,8 +782,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1872903290}
-  - {fileID: 187401193}
   - {fileID: 926972952}
+  - {fileID: 187401193}
   m_Father: {fileID: 0}
 --- !u!1001 &711798608
 Prefab:
@@ -966,6 +978,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
+  rayDistance: 100
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 0
+  nbrPeopleSentPerRate: 0
+  sendRate: 1
   ratio: .25
   attachedRockets: []
 --- !u!114 &763270709
@@ -1179,6 +1197,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .200000003
+  rayDistance: 100
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 0
+  nbrPeopleSentPerRate: 0
+  sendRate: 1
   ratio: .25
   attachedRockets: []
 --- !u!1001 &823255354
@@ -1306,6 +1330,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
+  rayDistance: 100
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 0
+  nbrPeopleSentPerRate: 0
+  sendRate: 1
   ratio: .25
   attachedRockets: []
 --- !u!114 &926972954
@@ -1421,9 +1451,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1257977281}
-  - {fileID: 1498185812}
   - {fileID: 763270707}
+  - {fileID: 1498185812}
+  - {fileID: 1257977281}
   m_Father: {fileID: 0}
 --- !u!1001 &1003369846
 Prefab:
@@ -1626,6 +1656,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
+  rayDistance: 100
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 0
+  nbrPeopleSentPerRate: 0
+  sendRate: 1
   ratio: .25
   attachedRockets: []
 --- !u!114 &1257977283
@@ -1773,6 +1809,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
+  rayDistance: 100
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 0
+  nbrPeopleSentPerRate: 0
+  sendRate: 1
   ratio: .25
   attachedRockets: []
 --- !u!114 &1367613259
@@ -1888,9 +1930,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1367613257}
   - {fileID: 2049225627}
   - {fileID: 68897034}
+  - {fileID: 1367613257}
   m_Father: {fileID: 0}
 --- !u!1001 &1483743711
 Prefab:
@@ -2017,6 +2059,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
+  rayDistance: 100
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 0
+  nbrPeopleSentPerRate: 0
+  sendRate: 1
   ratio: .25
   attachedRockets: []
 --- !u!114 &1498185814
@@ -2315,6 +2363,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
+  rayDistance: 100
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 0
+  nbrPeopleSentPerRate: 0
+  sendRate: 1
   ratio: .25
   attachedRockets: []
 --- !u!114 &1872903285
@@ -2652,6 +2706,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
+  rayDistance: 100
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 0
+  nbrPeopleSentPerRate: 0
+  sendRate: 1
   ratio: .25
   attachedRockets: []
 --- !u!114 &2049225629
@@ -2781,6 +2841,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketPrefab: {fileID: 100000, guid: db1c78934b1cf3a4baee412b4cba3bf5, type: 2}
-  rocketCount: 5
+  rocketTouches:
+  - keycode: 49
+    texture: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+  - keycode: 50
+    texture: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+  - keycode: 51
+    texture: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+  - keycode: 52
+    texture: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+  - keycode: 53
+    texture: {fileID: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
   planetTag: Planet
   ratioScale: 1.10000002

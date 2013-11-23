@@ -9,16 +9,21 @@ public class Capsule : MonoBehaviour {
 	private Planet attachedPlanet = null;
 	public int peoplePerGeneration = 1;
 	
+
+	
 	private Launcher launch;
+
 	public void resetGeneration()
 	{
 		lastGeneration = Time.time;
+		
 	}
 	
 	void Start()
 	{
 		launch = GetComponent<Launcher>();	
 	}
+
 	
 	// Update is called once per frame
 	void Update ()
