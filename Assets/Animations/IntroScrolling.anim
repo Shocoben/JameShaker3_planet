@@ -103,7 +103,7 @@ AnimationClip:
     script: {fileID: 0}
   m_EulerEditorCurves: []
   m_Events:
-  - time: 45.9333344
+  - time: 35.1166649
     functionName: LaunchGame
     data: 
     objectReferenceParameter: {fileID: 0}
