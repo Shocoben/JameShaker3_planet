@@ -7,7 +7,9 @@ public class unscaleParent : MonoBehaviour {
 	private Vector3 scaleStart;
 	void Start()
 	{
-		scaleStart = transform.parent.localScale;
+		if (transform.parent!=null) {
+			scaleStart = transform.parent.localScale;
+		}
 	}
 	
 	// Update is called once per frame

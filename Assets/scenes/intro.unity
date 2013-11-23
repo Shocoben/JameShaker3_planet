@@ -85,6 +85,7 @@ GameObject:
   - 33: {fileID: 1479229316}
   - 64: {fileID: 1479229315}
   - 23: {fileID: 1479229314}
+  - 111: {fileID: 1479229318}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -136,11 +137,29 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1479229313}
-  m_LocalRotation: {x: -3.09086232e-08, y: .707106829, z: -.707106829, w: -3.09086232e-08}
-  m_LocalPosition: {x: -1.22462428, y: 0, z: .9284392}
+  m_LocalRotation: {x: -1.04723398e-07, y: .766044497, z: -.642787635, w: -1.24804501e-07}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!111 &1479229318
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1479229313}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: d2e4243350f1bd44e830f635259764b3, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: d2e4243350f1bd44e830f635259764b3, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+  m_UserAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!1 &1560327877
 GameObject:
   m_ObjectHideFlags: 0
