@@ -11,7 +11,7 @@ PlayerSettings:
   targetResolution: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Planet
+  productName: JamShaker3
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
@@ -70,7 +70,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   iPhoneBundleIdentifier: com.Company.ProductName
-  productGUID: 6028b8d3d0261c342b297fd027b26b03
+  productGUID: f2a3967ccc89b9d4abf0249bda67b862
   iPhoneBundleVersion: 1.0
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 6
@@ -142,7 +142,7 @@ PlayerSettings:
   ps3TrialMode: 0
   flashStrippingLevel: 2
   scriptingDefineSymbols: {}
-  metroPackageName: Planet
+  metroPackageName: JamShaker3
   metroPackageLogo: 
   metroPackageVersion: 
   metroCertificatePath: 
@@ -150,7 +150,7 @@ PlayerSettings:
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Planet
+  metroApplicationDescription: JamShaker3
   metroTileLogo: 
   metroTileWideLogo: 
   metroTileSmallLogo: 
