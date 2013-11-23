@@ -28,4 +28,14 @@ public class Capsule : MonoBehaviour {
 		attachedPlanet = planet;
 		attachedPlanet.attachRocket(this);
 	}
+	
+	void OnBecameInvisible() {
+		Debug.Log (gameObject.name);
+		// TODO use real settings from camera
+		if (transform.position.x<-8 || transform.position.x>8 ||
+			transform.position.z<-4.5 || transform.position.z>4.5) {
+			transform.position = new Vector3(-transform.position.x,0,-transform.position.z);
+		}
+    }
+		
 }
