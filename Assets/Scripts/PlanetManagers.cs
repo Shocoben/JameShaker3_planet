@@ -8,6 +8,7 @@ public class PlanetManagers : MonoBehaviour {
 	public int rocketCount = 5;
 	public string planetTag = "Planet";
 	
+	public float ratioScale = 1.25f;
 	// Use this for initialization
 	void Start () {
 		GameObject[] planets = GameObject.FindGameObjectsWithTag(planetTag);
@@ -30,7 +31,7 @@ public class PlanetManagers : MonoBehaviour {
 			GameObject planet = planets[rand];
 			
 			Vector3 pos = planet.transform.position;
-			pos.x += planet.transform.localScale.x * 0.7f;
+			pos.x += planet.transform.localScale.x * ratioScale;
 			GameObject rocket = GameObject.Instantiate(rocketPrefab, pos, rocketPrefab.transform.rotation) as GameObject;
 			//rocket.transform.parent = planet.transform;
 			rocket.GetComponent<Capsule>().setAttachedPlanet(planet.GetComponent<Planet>());

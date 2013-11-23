@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400008}
-  - 114: {fileID: 11400004}
+  - 54: {fileID: 5400000}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Planet
@@ -86,6 +86,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_Mesh: {fileID: 4300000, guid: 9a01cae36d098244291a835295e2d4ec, type: 3}
+--- !u!54 &5400000
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!95 &9500000
 Animator:
   m_ObjectHideFlags: 1
@@ -128,20 +143,6 @@ MonoBehaviour:
   ellipseRX: 5
   elliseRY: 2
   angle: 123
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2228b6503f042b4296d5bd3d1e58faf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rate: .5
-  lastGeneration: 0
-  peoplePerGeneration: 1
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156,15 +157,18 @@ MonoBehaviour:
   distanceEffect: 1
   baseMassFactor: 10
   letter: 0
+  id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  id: 0
-  maxPeople: 5
+  maxPeople: 10
+  maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 1
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
-  sizeFactor: .100000001
+  sizeFactor: .0500000007
+  ratio: .25
+  attachedRockets: []
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -172,7 +176,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
