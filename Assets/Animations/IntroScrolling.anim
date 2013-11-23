@@ -22,16 +22,6 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 16.9333324
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 19.9833336
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: _MainTex.offset.x
@@ -42,19 +32,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .775862098
-        inSlope: -.0888671577
-        outSlope: -.0888671577
+        value: .699999988
+        inSlope: -.0444360897
+        outSlope: -.0444360897
         tangentMode: 10
-      - time: 16.9333324
-        value: -.72895503
-        inSlope: -.0888671651
-        outSlope: -.0888671651
-        tangentMode: 10
-      - time: 19.9833336
-        value: -1
-        inSlope: -.0888671726
-        outSlope: -.0888671726
+      - time: 50.0333328
+        value: -1.52328563
+        inSlope: -.0444360897
+        outSlope: -.0444360897
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -91,16 +76,6 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 16.9333324
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 19.9833336
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: _MainTex.offset.x
@@ -111,19 +86,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .775862098
-        inSlope: -.0888671577
-        outSlope: -.0888671577
+        value: .699999988
+        inSlope: -.0444360897
+        outSlope: -.0444360897
         tangentMode: 10
-      - time: 16.9333324
-        value: -.72895503
-        inSlope: -.0888671651
-        outSlope: -.0888671651
-        tangentMode: 10
-      - time: 19.9833336
-        value: -1
-        inSlope: -.0888671726
-        outSlope: -.0888671726
+      - time: 50.0333328
+        value: -1.52328563
+        inSlope: -.0444360897
+        outSlope: -.0444360897
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -133,7 +103,7 @@ AnimationClip:
     script: {fileID: 0}
   m_EulerEditorCurves: []
   m_Events:
-  - time: 16.9333324
+  - time: 45.9333344
     functionName: LaunchGame
     data: 
     objectReferenceParameter: {fileID: 0}
