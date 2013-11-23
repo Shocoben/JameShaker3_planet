@@ -168,7 +168,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceEffect: 1
-  massFactor: 5
+  baseMassFactor: 10
+  guiText: {fileID: 0}
+  letter: 0
+  people: 0
+  peoplePrefab: {fileID: 0}
+  id: 0
+  maxPeople: 5
 --- !u!114 &75619702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,7 +586,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceEffect: 1
-  massFactor: 5
+  baseMassFactor: 10
+  guiText: {fileID: 0}
+  letter: 0
+  people: 0
+  peoplePrefab: {fileID: 0}
+  id: 0
+  maxPeople: 5
 --- !u!114 &270474220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,7 +711,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceEffect: 1
-  massFactor: 5
+  baseMassFactor: 10
+  guiText: {fileID: 0}
+  letter: 0
+  people: 0
+  peoplePrefab: {fileID: 0}
+  id: 0
+  maxPeople: 5
 --- !u!114 &410324359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,7 +1160,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceEffect: 3
-  massFactor: 10
+  baseMassFactor: 10
+  guiText: {fileID: 0}
+  letter: 0
+  people: 0
+  peoplePrefab: {fileID: 0}
+  id: 0
+  maxPeople: 5
 --- !u!1001 &799756368
 Prefab:
   m_ObjectHideFlags: 0
@@ -1233,7 +1257,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceEffect: 1
-  massFactor: 5
+  baseMassFactor: 10
+  guiText: {fileID: 0}
+  letter: 0
+  people: 0
+  peoplePrefab: {fileID: 0}
+  id: 0
+  maxPeople: 5
 --- !u!114 &919753468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1399,7 +1429,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceEffect: 1
-  massFactor: 5
+  baseMassFactor: 10
+  guiText: {fileID: 0}
+  letter: 0
+  people: 0
+  peoplePrefab: {fileID: 0}
+  id: 0
+  maxPeople: 5
 --- !u!114 &1024561519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1697,7 +1733,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceEffect: 1
-  massFactor: 5
+  baseMassFactor: 10
+  guiText: {fileID: 0}
+  letter: 0
+  people: 0
+  peoplePrefab: {fileID: 0}
+  id: 0
+  maxPeople: 5
 --- !u!114 &1305424369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1816,7 +1858,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceEffect: 1
-  massFactor: 5
+  baseMassFactor: 10
+  guiText: {fileID: 0}
+  letter: 0
+  people: 0
+  peoplePrefab: {fileID: 0}
+  id: 0
+  maxPeople: 5
 --- !u!114 &1312763054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2082,7 +2130,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceEffect: 1
-  massFactor: 5
+  baseMassFactor: 10
+  guiText: {fileID: 0}
+  letter: 0
+  people: 0
+  peoplePrefab: {fileID: 0}
+  id: 0
+  maxPeople: 5
 --- !u!114 &1629156120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2426,7 +2480,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceEffect: 1
-  massFactor: 5
+  baseMassFactor: 10
+  guiText: {fileID: 0}
+  letter: 0
+  people: 0
+  peoplePrefab: {fileID: 0}
+  id: 0
+  maxPeople: 5
 --- !u!114 &1876877213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2713,7 +2773,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceEffect: 1
-  massFactor: 5
+  baseMassFactor: 10
+  guiText: {fileID: 0}
+  letter: 0
+  people: 0
+  peoplePrefab: {fileID: 0}
+  id: 0
+  maxPeople: 5
 --- !u!114 &2135810824
 MonoBehaviour:
   m_ObjectHideFlags: 0
