@@ -22,11 +22,6 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 6.01666641
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: _MainTex.offset.x
@@ -37,14 +32,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: -.166204989
-        outSlope: -.166204989
+        value: .699999988
+        inSlope: -.0444360897
+        outSlope: -.0444360897
         tangentMode: 10
-      - time: 6.01666641
-        value: -1
-        inSlope: -.166204989
-        outSlope: -.166204989
+      - time: 50.0333328
+        value: -1.52328563
+        inSlope: -.0444360897
+        outSlope: -.0444360897
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -81,11 +76,6 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 6.01666641
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: _MainTex.offset.x
@@ -96,14 +86,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: -.166204989
-        outSlope: -.166204989
+        value: .699999988
+        inSlope: -.0444360897
+        outSlope: -.0444360897
         tangentMode: 10
-      - time: 6.01666641
-        value: -1
-        inSlope: -.166204989
-        outSlope: -.166204989
+      - time: 50.0333328
+        value: -1.52328563
+        inSlope: -.0444360897
+        outSlope: -.0444360897
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -112,4 +102,11 @@ AnimationClip:
     classID: 21
     script: {fileID: 0}
   m_EulerEditorCurves: []
-  m_Events: []
+  m_Events:
+  - time: 45.9333344
+    functionName: LaunchGame
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
