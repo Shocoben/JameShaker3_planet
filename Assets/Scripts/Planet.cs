@@ -106,4 +106,13 @@ public class Planet : MonoBehaviour {
 		return baseMassFactor * (1 + people);
 	}
 	
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.GetComponent<Engine>()!=null &&
+			other.gameObject.GetComponent<Engine>().enabled) {
+			other.gameObject.GetComponent<Engine>().enabled = false;
+			other.gameObject.transform.parent = transform;
+		}
+	}
+
 }

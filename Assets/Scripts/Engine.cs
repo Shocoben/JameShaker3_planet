@@ -21,9 +21,6 @@ public class Engine : MonoBehaviour {
 		foreach (Planet p in _planets) {
 			float d = Vector3.Distance(transform.position,p.gameObject.transform.position);
 			if (d<p.distanceEffect) {
-				Debug.Log ("planet effect: " + p.gameObject.name);
-				//transform.RotateAround(transform.position,Vector3.up, p.massFactor*d*Time.deltaTime);
-				
 	 	 		Vector3 relativePos = p.gameObject.transform.position - transform.position;
         		Quaternion rotation = Quaternion.LookRotation(relativePos);
         		transform.rotation = Quaternion.Lerp(transform.rotation,rotation,Time.deltaTime*0.5f);				
@@ -31,6 +28,14 @@ public class Engine : MonoBehaviour {
 		}
 		transform.Translate(Vector3.forward * speed * Time.deltaTime);		
 	}
+	
+	void OnBecameInvisible() {
+		// TODO use real settings from camera
+		if (transform.position.x<-8 || transform.position.x>8 ||
+			transform.position.z<-4.5 || transform.position.z>4.5) {
+			transform.position = new Vector3(-transform.position.x,0,-transform.position.z);
+		}
+    }
 	
 	private Planet[] _planets;
 }
