@@ -9,6 +9,9 @@ public class SnapObject : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		transform.position = oToSnap.transform.position + offset;
+		if (oToSnap != null)
+			transform.position = oToSnap.transform.position + offset;
+		else
+			GameObject.Destroy(this.gameObject);
 	}
 }

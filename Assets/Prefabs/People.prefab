@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minSpeed: 2
-  maxSpeed: 3
+  maxSpeed: 5
   planetTag: Planet
 --- !u!136 &13600000
 CapsuleCollider:

@@ -10,21 +10,20 @@ public class Planet : MonoBehaviour {
 	
 	private TextMesh letterText;
 	private TextMesh percentText;
-	
 	public KeyCode letter;
-	private int _people;
 	
-	public int peopleStart = 1;
 	
 	public static Planet selected = null;
 	public static int instanceCount = 0;
-	
-	public GameObject peoplePrefab;
-	
 	public int id = 0;
+
+	private int _people;
+	public int peopleStart = 1;
+	public GameObject peoplePrefab;
 	
 	private float minSize = 1;
 	public float maxPeople = 5;
+	public float maxRadius = 1.5f;
 	
 	private List<People> peopleComingToMe = new List<People>();
 	
@@ -37,6 +36,8 @@ public class Planet : MonoBehaviour {
 	public GameObject pPercentPrefab;
 	
 	public float sizeFactor = 0.2f;
+	
+	
 	
 	void Start()
 	{
@@ -135,18 +136,20 @@ public class Planet : MonoBehaviour {
 	public void onDeselect()
 	{
 		percentText.gameObject.SetActive(false);
+		_percentPeople = 0;
 	}
 	
 	public void sendPeopleTo(Planet objectiv)
 	{
 		int nbrPeople = Mathf.FloorToInt(_people * (_percentPeople / 100));
 		
+		Debug.Log(nbrPeople);
 		for (int i = 0; i < nbrPeople; ++i)
 		{
 			Vector3 direction = objectiv.transform.position - transform.position;
 			direction.Normalize();
 			
-			GameObject newPeople = GameObject.Instantiate(peoplePrefab, transform.position + direction * transform.localScale.x , Quaternion.identity) as GameObject;
+			GameObject newPeople = GameObject.Instantiate(peoplePrefab, transform.position + direction * transform.localScale.x * 0.5f , Quaternion.identity) as GameObject;
 			People nPol = newPeople.GetComponent<People>();
 			nPol.setTarget(objectiv);
 		}
@@ -163,9 +166,10 @@ public class Planet : MonoBehaviour {
 		{
 			_people = 0;	
 		}
+		
 		if (_people > maxPeople)
 		{
-			onMaxPeople();	
+			onMaxPeople();
 		}
 		
 		resizeWithPeople();
@@ -173,7 +177,7 @@ public class Planet : MonoBehaviour {
 	
 	public void resizeWithPeople()
 	{
-		float size = minSize + _people * sizeFactor;
+		float size = minSize + (maxRadius - minSize) * _people / maxPeople;
 		transform.localScale = new Vector3(size, size, size);
 	}
 	
@@ -184,6 +188,11 @@ public class Planet : MonoBehaviour {
 			peopleComingToMe[i].setTarget(null);
 		}
 		peopleComingToMe.Clear();
+		for (int j = 0; j < attachedRockets.Count; ++j)
+		{
+			attachedRockets[j].transform.parent = null;
+		}
+		GameObject.Destroy(this.gameObject);
 	}
 	
 	public float getMassFactor()
@@ -191,25 +200,38 @@ public class Planet : MonoBehaviour {
 		return baseMassFactor * (1 + _people);
 	}
 	
+	public float ratio;
+	public List<Capsule> attachedRockets = new List<Capsule>();
+	
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.GetComponent<Engine>()!=null &&
 			other.gameObject.GetComponent<Engine>().enabled) {
 			other.gameObject.GetComponent<Engine>().enabled = false;
-			other.gameObject.transform.parent = transform;
+			other.gameObject.GetComponent<Capsule>().setAttachedPlanet(this);
+			
 			
 			RaycastHit hit = new RaycastHit();
 			if (Physics.Raycast(
 				other.gameObject.transform.position,
 				transform.position-other.gameObject.transform.position,
-				out hit)) {
+				out hit)) 
+			{
 				other.gameObject.transform.rotation = Quaternion.LookRotation(hit.normal);
 				Vector3 dir = (other.gameObject.transform.position-transform.position);
 				dir.Normalize();
-				other.gameObject.transform.position = transform.position + dir * transform.localScale.x*.5f + dir * other.gameObject.transform.localScale.x*.5f;
+				other.gameObject.transform.position = transform.position + (dir * transform.localScale.x * .5f) + (dir * other.gameObject.transform.localScale.x*ratio);
 			}
+			other.gameObject.transform.parent = transform;
 			
 		}
 	}
+	
+	public void attachRocket(Capsule rocket)
+	{
+		attachedRockets.Add(rocket);	
+	}
+	
+	
 	
 }

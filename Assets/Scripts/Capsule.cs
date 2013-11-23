@@ -26,5 +26,6 @@ public class Capsule : MonoBehaviour {
 	public void setAttachedPlanet(Planet planet)
 	{
 		attachedPlanet = planet;
+		attachedPlanet.attachRocket(this);
 	}
 }
