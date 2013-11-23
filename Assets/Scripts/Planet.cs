@@ -9,9 +9,12 @@ public class Planet : MonoBehaviour {
 	
 	
 	public TextMesh guiText;
+	public TextMesh percentText;
 	
 	public KeyCode letter;
-	public int people = 0;
+	private int _people;
+	
+	public int peopleStart = 1;
 	
 	public static Planet selected = null;
 	public static int instanceCount = 0;
@@ -25,11 +28,20 @@ public class Planet : MonoBehaviour {
 	
 	private List<People> peopleComingToMe = new List<People>();
 	
+	private float _percentPeople = 0;
+	public float peopleSelectSpeed = 3;
+	
+	public int minimPeopleToExplodeRocket = 1;
+	
+	
+	
 	void Start()
 	{
 		minSize = transform.localScale.x;
 		id = instanceCount;
 		instanceCount ++;
+		_people = peopleStart;
+		
 		if (letter != null && guiText != null)
 			guiText.text = letter.ToString();
 	}
@@ -39,6 +51,8 @@ public class Planet : MonoBehaviour {
 		peopleComingToMe.Add(people);
 	}
 	
+	
+	
 	void Update()
 	{
 		if (Input.GetKeyDown(letter))
@@ -46,6 +60,7 @@ public class Planet : MonoBehaviour {
 			if (selected == null)
 			{
 				selected = this;
+				
 			}
 			else
 			{
@@ -56,38 +71,80 @@ public class Planet : MonoBehaviour {
 				}
 				else
 				{
-					selected.addPeople(-1);
 					selected.sendPeopleTo(this);
-				
+					
 					selected = null;
 				}
 			}
+		}
+		
+		if (selected != null && selected.id == id)
+		{
+			if (Input.GetKeyDown(KeyCode.Space))
+			{
+				_percentPeople = 0;
+			}
+			else if (Input.GetKey(KeyCode.Space))
+			{
+				if (_people > 1)
+				{
+					_percentPeople += peopleSelectSpeed * Time.deltaTime;
+				}
+				else
+				{
+					_percentPeople = 100;
+				}
+			}
+			else if (Input.GetKeyUp(KeyCode.Space))
+			{
+				_percentPeople = 0;	
+			}
+			
+			if (_percentPeople > 100)
+			{
+				_percentPeople = 100;	
+			}
+			
+		}
+		
+		if (percentText != null)
+		{
+			percentText.text = Mathf.Floor(_percentPeople) + "%";
 		}
 	}
 	
 	public void sendPeopleTo(Planet objectiv)
 	{
-		Debug.Log(objectiv.letter.ToString());
-		Vector3 direction = objectiv.transform.position - transform.position;
-		direction.Normalize();
+		int nbrPeople = Mathf.FloorToInt(_people * (_percentPeople / 100));
+		Debug.Log(_people * (_percentPeople / 100));
 		
-		GameObject newPeople = GameObject.Instantiate(peoplePrefab, transform.position + direction * transform.localScale.x, Quaternion.identity) as GameObject;
-		People nPol = newPeople.GetComponent<People>();
-		nPol.setTarget(objectiv);
+		for (int i = 0; i < nbrPeople; ++i)
+		{
+			Vector3 direction = objectiv.transform.position - transform.position;
+			direction.Normalize();
+			
+			GameObject newPeople = GameObject.Instantiate(peoplePrefab, transform.position + direction * transform.localScale.x, Quaternion.identity) as GameObject;
+			People nPol = newPeople.GetComponent<People>();
+			nPol.setTarget(objectiv);
+			
+		}
+		_percentPeople = 0;
+		addPeople(-nbrPeople);
 	}
+
 	
 	public void addPeople(int nbr)
 	{
-		people += nbr;
-		if (people < 0)
+		_people += nbr;
+		if (_people < 0)
 		{
-			people = 0;	
+			_people = 0;	
 		}
-		if (people > maxPeople)
+		if (_people > maxPeople)
 		{
 			onMaxPeople();	
 		}
-		float size = minSize + people;
+		float size = minSize + _people;
 		transform.localScale = new Vector3(size, size, size);
 	}
 	
@@ -103,7 +160,7 @@ public class Planet : MonoBehaviour {
 	
 	public float getMassFactor()
 	{
-		return baseMassFactor * (1 + people);
+		return baseMassFactor * (1 + _people);
 	}
 	
 	void OnTriggerEnter(Collider other)
