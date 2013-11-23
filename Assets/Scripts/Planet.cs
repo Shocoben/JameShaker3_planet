@@ -106,7 +106,7 @@ public class Planet : MonoBehaviour {
 				selected.sendPeopleTo(this);	
 			}
 		}
-		else if (Input.GetMouseButtonUp(0))
+		else if (Input.GetMouseButtonUp(0) && selected!=null)
 		{
 			selected.onDeselect();
 			selected = null;

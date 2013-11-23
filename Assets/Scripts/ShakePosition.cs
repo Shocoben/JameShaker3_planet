@@ -16,4 +16,9 @@ public class ShakePosition : MonoBehaviour {
 	    iTween.ShakePosition(gameObject, ht);	
 	}
 	
+	void Update() {
+		if (Input.GetKeyUp(KeyCode.S)) {
+			Shake();
+		}
+	}
 }
