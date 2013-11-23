@@ -160,7 +160,7 @@ MonoBehaviour:
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 2
+  maxPeople: 50
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 1

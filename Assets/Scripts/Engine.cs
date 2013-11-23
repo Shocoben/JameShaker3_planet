@@ -31,13 +31,5 @@ public class Engine : MonoBehaviour {
 		transform.Translate(Vector3.forward * speed * Time.deltaTime);
 	}
 	
-	void OnBecameInvisible() {
-		// TODO use real settings from camera
-		if (transform.position.x<-8 || transform.position.x>8 ||
-			transform.position.z<-4.5 || transform.position.z>4.5) {
-			transform.position = new Vector3(-transform.position.x,0,-transform.position.z);
-		}
-    }
-	
 	private Planet[] _planets;
 }
