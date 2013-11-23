@@ -69,6 +69,12 @@ public class Planet : MonoBehaviour {
 		peopleComingToMe.Add(people);
 	}
 	
+	public float UpdateDistanceEffect()
+	{
+		distanceEffect = transform.localScale.x * distanceEffect / minSize;
+		return distanceEffect;
+	}
+	
 	public float rayDistance = 100;
 	public LayerMask rayMask;
 	bool mouseTouchMe()
@@ -281,6 +287,5 @@ public class Planet : MonoBehaviour {
 	{
 		attachedRockets.Remove(rocket);
 	}
-	
 	
 }

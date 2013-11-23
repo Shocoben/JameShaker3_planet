@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 117
   id: 0
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 114
   id: 0
@@ -785,9 +785,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1872903290}
-  - {fileID: 926972952}
   - {fileID: 187401193}
+  - {fileID: 926972952}
+  - {fileID: 1872903290}
   m_Father: {fileID: 0}
 --- !u!1001 &711798608
 Prefab:
@@ -969,7 +969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 97
   id: 0
@@ -1141,7 +1141,7 @@ SphereCollider:
   m_GameObject: {fileID: 781506323}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 2
+  distanceEffect: -1
   baseMassFactor: 10
   letter: 115
   id: 0
@@ -1321,7 +1321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 116
   id: 0
@@ -1456,8 +1456,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 763270707}
-  - {fileID: 1498185812}
   - {fileID: 1257977281}
+  - {fileID: 1498185812}
   m_Father: {fileID: 0}
 --- !u!1001 &1003369846
 Prefab:
@@ -1647,7 +1647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 122
   id: 0
@@ -1800,7 +1800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 105
   id: 0
@@ -2050,7 +2050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 101
   id: 0
@@ -2369,7 +2369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 121
   id: 0
@@ -2712,7 +2712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 111
   id: 0
