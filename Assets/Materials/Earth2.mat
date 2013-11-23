@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Earth
+  m_Name: Earth2
   m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_SavedProperties:
@@ -24,4 +24,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .0758624077, g: 0, b: 1, a: 1}
+        second: {r: .131980911, g: .963235319, b: .0637435168, a: 1}

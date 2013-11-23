@@ -34,11 +34,6 @@ public class Launcher : MonoBehaviour {
 		_strenghtOrigine = Input.mousePosition.y;
 	}
 	
-	void OnBecameInvisible() {
-		Debug.Log ("OnBecameInvisible: " + transform.position);
-		//transform.position = new Vector3(-transform.position.x,0,-transform.position.z);
-    }
-	
 	LineRenderer _lineRender;
 	Engine _engine;
 	float _strenght = 1;
