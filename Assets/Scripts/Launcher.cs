@@ -63,6 +63,8 @@ public class Launcher : MonoBehaviour {
 			else if (Input.GetKeyDown(_letter))
 			{
 				_lineRender.enabled = true;
+				_lineRender.SetPosition(0,transform.position);
+				_lineRender.SetPosition(1,transform.position );
 				_strenghtOrigine = Input.mousePosition.y;
 				_timeOrigine = Time.time;
 			}

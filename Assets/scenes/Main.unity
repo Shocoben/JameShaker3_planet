@@ -87,7 +87,7 @@ GameObject:
   - 114: {fileID: 68897036}
   - 114: {fileID: 68897035}
   - 54: {fileID: 68897042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Earth
   m_TagString: Planet
   m_Icon: {fileID: 0}
@@ -131,11 +131,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
-  rayDistance: 100
+  showLetter: 0
+  rayDistance: 1000
   rayMask:
     serializedVersion: 2
-    m_Bits: 0
-  nbrPeopleSentPerRate: 0
+    m_Bits: 256
+  nbrPeopleSentPerRate: 5
   sendRate: 1
   ratio: .25
   attachedRockets: []
@@ -380,7 +381,7 @@ GameObject:
   - 114: {fileID: 187401195}
   - 114: {fileID: 187401194}
   - 54: {fileID: 187401201}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Earth
   m_TagString: Planet
   m_Icon: {fileID: 0}
@@ -424,11 +425,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
-  rayDistance: 100
+  showLetter: 0
+  rayDistance: 1000
   rayMask:
     serializedVersion: 2
-    m_Bits: 0
-  nbrPeopleSentPerRate: 0
+    m_Bits: 256
+  nbrPeopleSentPerRate: 5
   sendRate: 1
   ratio: .25
   attachedRockets: []
@@ -531,7 +533,7 @@ GameObject:
   - 33: {fileID: 1367613263}
   - 23: {fileID: 1367613261}
   - 95: {fileID: 321837886}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: planete01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +575,7 @@ GameObject:
   - 33: {fileID: 68897040}
   - 23: {fileID: 68897038}
   - 95: {fileID: 380255520}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: planete01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -615,7 +617,7 @@ GameObject:
   - 33: {fileID: 1498185818}
   - 23: {fileID: 1498185816}
   - 95: {fileID: 491709359}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: planete01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -725,7 +727,7 @@ GameObject:
   - 33: {fileID: 1257977287}
   - 23: {fileID: 1257977285}
   - 95: {fileID: 507077068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: planete01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,8 +783,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1872903290}
   - {fileID: 926972952}
+  - {fileID: 1872903290}
   - {fileID: 187401193}
   m_Father: {fileID: 0}
 --- !u!1001 &711798608
@@ -934,7 +936,7 @@ GameObject:
   - 114: {fileID: 763270709}
   - 114: {fileID: 763270708}
   - 54: {fileID: 763270715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Earth
   m_TagString: Planet
   m_Icon: {fileID: 0}
@@ -978,11 +980,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
-  rayDistance: 100
+  showLetter: 0
+  rayDistance: 1000
   rayMask:
     serializedVersion: 2
-    m_Bits: 0
-  nbrPeopleSentPerRate: 0
+    m_Bits: 256
+  nbrPeopleSentPerRate: 5
   sendRate: 1
   ratio: .25
   attachedRockets: []
@@ -1197,6 +1200,7 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .200000003
+  showLetter: 0
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -1286,7 +1290,7 @@ GameObject:
   - 114: {fileID: 926972954}
   - 114: {fileID: 926972953}
   - 54: {fileID: 926972960}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Earth
   m_TagString: Planet
   m_Icon: {fileID: 0}
@@ -1330,11 +1334,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
-  rayDistance: 100
+  showLetter: 0
+  rayDistance: 1000
   rayMask:
     serializedVersion: 2
-    m_Bits: 0
-  nbrPeopleSentPerRate: 0
+    m_Bits: 256
+  nbrPeopleSentPerRate: 5
   sendRate: 1
   ratio: .25
   attachedRockets: []
@@ -1451,8 +1456,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 763270707}
   - {fileID: 1498185812}
+  - {fileID: 763270707}
   - {fileID: 1257977281}
   m_Father: {fileID: 0}
 --- !u!1001 &1003369846
@@ -1526,7 +1531,7 @@ GameObject:
   - 33: {fileID: 1872903289}
   - 23: {fileID: 1872903287}
   - 95: {fileID: 1071231106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: planete01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1568,7 +1573,7 @@ GameObject:
   - 33: {fileID: 187401199}
   - 23: {fileID: 187401197}
   - 95: {fileID: 1102520068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: planete01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1612,7 +1617,7 @@ GameObject:
   - 114: {fileID: 1257977283}
   - 114: {fileID: 1257977282}
   - 54: {fileID: 1257977289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Earth
   m_TagString: Planet
   m_Icon: {fileID: 0}
@@ -1656,11 +1661,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
-  rayDistance: 100
+  showLetter: 0
+  rayDistance: 1000
   rayMask:
     serializedVersion: 2
-    m_Bits: 0
-  nbrPeopleSentPerRate: 0
+    m_Bits: 256
+  nbrPeopleSentPerRate: 5
   sendRate: 1
   ratio: .25
   attachedRockets: []
@@ -1765,7 +1771,7 @@ GameObject:
   - 114: {fileID: 1367613259}
   - 114: {fileID: 1367613258}
   - 54: {fileID: 1367613265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Earth
   m_TagString: Planet
   m_Icon: {fileID: 0}
@@ -1809,11 +1815,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
-  rayDistance: 100
+  showLetter: 0
+  rayDistance: 1000
   rayMask:
     serializedVersion: 2
-    m_Bits: 0
-  nbrPeopleSentPerRate: 0
+    m_Bits: 256
+  nbrPeopleSentPerRate: 5
   sendRate: 1
   ratio: .25
   attachedRockets: []
@@ -1930,9 +1937,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1367613257}
   - {fileID: 2049225627}
   - {fileID: 68897034}
-  - {fileID: 1367613257}
   m_Father: {fileID: 0}
 --- !u!1001 &1483743711
 Prefab:
@@ -2015,7 +2022,7 @@ GameObject:
   - 114: {fileID: 1498185814}
   - 114: {fileID: 1498185813}
   - 54: {fileID: 1498185820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Earth
   m_TagString: Planet
   m_Icon: {fileID: 0}
@@ -2059,11 +2066,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
-  rayDistance: 100
+  showLetter: 0
+  rayDistance: 1000
   rayMask:
     serializedVersion: 2
-    m_Bits: 0
-  nbrPeopleSentPerRate: 0
+    m_Bits: 256
+  nbrPeopleSentPerRate: 5
   sendRate: 1
   ratio: .25
   attachedRockets: []
@@ -2166,7 +2174,7 @@ GameObject:
   - 33: {fileID: 763270713}
   - 23: {fileID: 763270711}
   - 95: {fileID: 1523279840}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: planete01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2208,7 +2216,7 @@ GameObject:
   - 33: {fileID: 2049225633}
   - 23: {fileID: 2049225631}
   - 95: {fileID: 1685628712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: planete01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2331,7 +2339,7 @@ GameObject:
   - 114: {fileID: 1872903285}
   - 114: {fileID: 1872903284}
   - 54: {fileID: 1872903292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Earth
   m_TagString: Planet
   m_Icon: {fileID: 0}
@@ -2363,11 +2371,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
-  rayDistance: 100
+  showLetter: 0
+  rayDistance: 1000
   rayMask:
     serializedVersion: 2
-    m_Bits: 0
-  nbrPeopleSentPerRate: 0
+    m_Bits: 256
+  nbrPeopleSentPerRate: 5
   sendRate: 1
   ratio: .25
   attachedRockets: []
@@ -2550,7 +2559,7 @@ GameObject:
   - 33: {fileID: 926972958}
   - 23: {fileID: 926972956}
   - 95: {fileID: 1946200621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: planete01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2662,7 +2671,7 @@ GameObject:
   - 114: {fileID: 2049225629}
   - 114: {fileID: 2049225628}
   - 54: {fileID: 2049225635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Earth
   m_TagString: Planet
   m_Icon: {fileID: 0}
@@ -2706,11 +2715,12 @@ MonoBehaviour:
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
-  rayDistance: 100
+  showLetter: 0
+  rayDistance: 1000
   rayMask:
     serializedVersion: 2
-    m_Bits: 0
-  nbrPeopleSentPerRate: 0
+    m_Bits: 256
+  nbrPeopleSentPerRate: 5
   sendRate: 1
   ratio: .25
   attachedRockets: []

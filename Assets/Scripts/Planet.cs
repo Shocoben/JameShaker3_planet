@@ -36,9 +36,7 @@ public class Planet : MonoBehaviour {
 	public GameObject pPercentPrefab;
 	
 	public float sizeFactor = 0.2f;
-	
-	
-	
+	public bool showLetter = false;
 	void Start()
 	{
 		minSize = transform.localScale.x;
@@ -46,16 +44,21 @@ public class Planet : MonoBehaviour {
 		instanceCount ++;
 		_people = peopleStart;
 		
-		GameObject pLetter = GameObject.Instantiate(pLetterPrefab, Vector3.zero, pLetterPrefab.transform.rotation) as GameObject;
-		pLetter.GetComponent<SnapObject>().oToSnap = this.transform;
-		letterText = pLetter.GetComponent<TextMesh>();
+		if (showLetter)
+		{
+			GameObject pLetter = GameObject.Instantiate(pLetterPrefab, Vector3.zero, pLetterPrefab.transform.rotation) as GameObject;
+			pLetter.GetComponent<SnapObject>().oToSnap = this.transform;
+			letterText = pLetter.GetComponent<TextMesh>();
+			if (letter != null && letterText != null)
+				letterText.text = letter.ToString();
+		}
+		
 		
 		GameObject pPercent = GameObject.Instantiate(pPercentPrefab, Vector3.zero, pPercentPrefab.transform.rotation) as GameObject;
 		pPercent.GetComponent<SnapObject>().oToSnap = this.transform;
 		percentText = pPercent.GetComponent<TextMesh>();
 		
-		if (letter != null && letterText != null)
-			letterText.text = letter.ToString();
+
 		
 		if (pPercent != null)
 		{
@@ -75,7 +78,7 @@ public class Planet : MonoBehaviour {
 	{
 		RaycastHit hit;
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		
+		//Debug.DrawLine(ray.origin, ray.origin + ray.direction * rayDistance, Color.green, 1.5f);
 		if (Physics.Raycast(ray, out hit, rayDistance, rayMask.value))
 		{
 			if (hit.collider.gameObject.GetComponent<Planet>().id == id)
@@ -97,19 +100,24 @@ public class Planet : MonoBehaviour {
 				if (selected == null)
 					selected = this;
 			}
-			
 		}
-		else if (Input.GetMouseButton(0))
+		else if ( Input.GetMouseButton(0) )
 		{
-			if (mouseTouchMe() && !selected)
+			
+			
+			if (mouseTouchMe() && selected != null)
+				Debug.Log(selected.id + " id " + id);
+			
+			if (mouseTouchMe() && selected != null && selected.id != id)
 			{
 				selected.sendPeopleTo(this);	
 			}
 		}
-		else if (Input.GetMouseButtonUp(0))
+		else if ( Input.GetMouseButtonUp(0) && selected != null )
 		{
 			selected.onDeselect();
 			selected = null;
+			
 		}
 		/*
 		if (Input.GetKeyDown(letter))
@@ -182,24 +190,34 @@ public class Planet : MonoBehaviour {
 	
 	public int nbrPeopleSentPerRate;
 	public float sendRate = 1;
+	private float lastSent;
+	
+	public void resetLastSent()
+	{
+		lastSent = Time.time;	
+	}
 	
 	public void sendPeopleTo(Planet objectiv)
 	{
-		
+		if (lastSent + sendRate > Time.time)
+		{
+			return;
+		}
 		//int nbrPeople = Mathf.FloorToInt(_people * (_percentPeople / 100));
-		int nbrPeople = nbrPeopleSentPerRate;
+		int nbrPeople = (_people < nbrPeopleSentPerRate)? _people :  nbrPeopleSentPerRate;
 		for (int i = 0; i < nbrPeople; ++i)
 		{
 			Vector3 direction = objectiv.transform.position - transform.position;
 			direction.Normalize();
 			
-			GameObject newPeople = GameObject.Instantiate(peoplePrefab, transform.position + direction * transform.localScale.x * 0.5f , Quaternion.identity) as GameObject;
+			GameObject newPeople = GameObject.Instantiate(peoplePrefab, transform.position + direction * transform.localScale.x * 0.5f , peoplePrefab.transform.rotation) as GameObject;
 			People nPol = newPeople.GetComponent<People>();
 			nPol.setTarget(objectiv);
 		}
 		
 		_percentPeople = 0;
 		addPeople(-nbrPeople);
+		resetLastSent();
 	}
 
 	
