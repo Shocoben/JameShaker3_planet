@@ -209,7 +209,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceEffect: 1
-  massFactor: 5
+  baseMassFactor: 10
+  guiText: {fileID: 0}
+  letter: 0
+  people: 0
+  peoplePrefab: {fileID: 0}
+  id: 0
+  maxPeople: 5
 --- !u!120 &12000000
 LineRenderer:
   m_ObjectHideFlags: 1

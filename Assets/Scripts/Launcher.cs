@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Launcher : MonoBehaviour {
 	
+	public float maxStrength = 5f;
+	public float maxTime = 2f;
+	public bool timed = true;
+	
 	// Use this for initialization
 	void Start () {
 		_lineRender = GetComponent<LineRenderer>();
@@ -21,7 +25,12 @@ public class Launcher : MonoBehaviour {
 				_engine.enabled = true;
 				_engine.speed = _strenght;
 			} else {
-				_strenght = Mathf.Clamp((Input.mousePosition.y-_strenghtOrigine)*0.01f,0,10);
+				if (timed) {
+					float t = Mathf.Clamp(Time.time-_timeOrigine,0,maxTime);
+					_strenght = (t/maxTime)*maxStrength;
+				} else {
+					_strenght = Mathf.Clamp((Input.mousePosition.y-_strenghtOrigine)*0.01f,0,maxStrength);
+				}
 				_lineRender.SetPosition(0,transform.position);
 				_lineRender.SetPosition(1,transform.position+transform.forward*_strenght);
 			}
@@ -32,6 +41,7 @@ public class Launcher : MonoBehaviour {
 		_lineRender.enabled = true;
 		_touched = true;
 		_strenghtOrigine = Input.mousePosition.y;
+		_timeOrigine = Time.time;
 	}
 	
 	LineRenderer _lineRender;
@@ -39,4 +49,5 @@ public class Launcher : MonoBehaviour {
 	float _strenght = 1;
 	bool _touched = false;
 	float _strenghtOrigine;
+	float _timeOrigine;
 }

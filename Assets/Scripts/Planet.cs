@@ -112,6 +112,7 @@ public class Planet : MonoBehaviour {
 			other.gameObject.GetComponent<Engine>().enabled) {
 			other.gameObject.GetComponent<Engine>().enabled = false;
 			other.gameObject.transform.parent = transform;
+			other.gameObject.transform.RotateAround(other.gameObject.transform.position,Vector3.up,180);
 		}
 	}
 

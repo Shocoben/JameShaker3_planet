@@ -12,26 +12,33 @@ public class RotateAroundSun : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		_sun = Sun.Instance().transform;
+		//_sun = Sun.Instance().transform;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (circular) {
-	 		//transform.RotateAround(Vector3.zero, axis, speed * Time.deltaTime);
- 			transform.RotateAround(_sun.position, axis, speed * Time.deltaTime);
+	 		transform.RotateAround(Vector3.zero, axis, speed * Time.deltaTime);
+ 			//transform.RotateAround(_sun.position, axis, speed * Time.deltaTime);
 		} else {
 			angle += Time.deltaTime*speed;
 			if (angle>360) {
 				angle -= 360;
 			}
+
 			transform.position = new Vector3(
+				ellipseRX*Mathf.Cos(Mathf.Deg2Rad*angle),
+				0,
+				elliseRY*Mathf.Sin(Mathf.Deg2Rad*angle)
+			);
+			/*transform.position = new Vector3(
 				_sun.position.x+ellipseRX*Mathf.Cos(Mathf.Deg2Rad*angle),
 				_sun.position.y,
-				_sun.position.z+elliseRY*Mathf.Sin(Mathf.Deg2Rad*angle));
+				_sun.position.z+elliseRY*Mathf.Sin(Mathf.Deg2Rad*angle)
+			);*/
 		}
 	}
 
-	private Transform _sun;
+	//private Transform _sun;
 	
 }
