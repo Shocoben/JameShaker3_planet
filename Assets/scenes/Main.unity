@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 117
   id: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
   showLetter: 0
-  rayDistance: 1000
+  rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 114
   id: 0
@@ -426,7 +426,7 @@ MonoBehaviour:
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
   showLetter: 0
-  rayDistance: 1000
+  rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
@@ -711,6 +711,10 @@ Prefab:
       propertyPath: letter
       value: 101
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0e1191fcfee3e8b4d9934c74ae1b00f8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 1498185811}
@@ -967,7 +971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 97
   id: 0
@@ -981,7 +985,7 @@ MonoBehaviour:
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
   showLetter: 0
-  rayDistance: 1000
+  rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
@@ -1140,7 +1144,7 @@ SphereCollider:
   m_GameObject: {fileID: 781506323}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
@@ -1187,7 +1191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 2
+  distanceEffect: -1
   baseMassFactor: 10
   letter: 115
   id: 0
@@ -1321,7 +1325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 116
   id: 0
@@ -1335,7 +1339,7 @@ MonoBehaviour:
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
   showLetter: 0
-  rayDistance: 1000
+  rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
@@ -1456,9 +1460,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1257977281}
   - {fileID: 1498185812}
   - {fileID: 763270707}
-  - {fileID: 1257977281}
   m_Father: {fileID: 0}
 --- !u!1001 &1003369846
 Prefab:
@@ -1648,7 +1652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 122
   id: 0
@@ -1662,7 +1666,7 @@ MonoBehaviour:
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
   showLetter: 0
-  rayDistance: 1000
+  rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
@@ -1802,7 +1806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 105
   id: 0
@@ -1816,7 +1820,7 @@ MonoBehaviour:
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
   showLetter: 0
-  rayDistance: 1000
+  rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
@@ -1938,8 +1942,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1367613257}
-  - {fileID: 2049225627}
   - {fileID: 68897034}
+  - {fileID: 2049225627}
   m_Father: {fileID: 0}
 --- !u!1001 &1483743711
 Prefab:
@@ -2053,7 +2057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 101
   id: 0
@@ -2067,7 +2071,7 @@ MonoBehaviour:
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
   showLetter: 0
-  rayDistance: 1000
+  rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
@@ -2120,7 +2124,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: a239dd7f19430a84eba13956a07174f1, type: 2}
+  - {fileID: 2100000, guid: 0e1191fcfee3e8b4d9934c74ae1b00f8, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2259,6 +2263,7 @@ GameObject:
   - 92: {fileID: 1710955199}
   - 124: {fileID: 1710955198}
   - 81: {fileID: 1710955197}
+  - 114: {fileID: 1710955202}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2326,6 +2331,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1710955202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710955196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1d1f2a36eeb7814aa0bf281895ddbcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeX: .5
+  shakeY: .5
+  shakeTime: 1
 --- !u!1 &1872903283
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,7 +2377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 121
   id: 0
@@ -2372,7 +2391,7 @@ MonoBehaviour:
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
   showLetter: 0
-  rayDistance: 1000
+  rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
@@ -2702,7 +2721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 111
   id: 0
@@ -2716,7 +2735,7 @@ MonoBehaviour:
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
   showLetter: 0
-  rayDistance: 1000
+  rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
@@ -2853,19 +2872,19 @@ MonoBehaviour:
   rocketPrefab: {fileID: 100000, guid: db1c78934b1cf3a4baee412b4cba3bf5, type: 2}
   rocketTouches:
   - keycode: 49
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: acdecc39d0c96194fb4df3cb71401b79, type: 3}
     color: {r: 0, g: 0, b: 0, a: 0}
   - keycode: 50
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: 96c562767f6340b418bceaa4a6ca4a59, type: 3}
     color: {r: 0, g: 0, b: 0, a: 0}
   - keycode: 51
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: b5405492bd49f70498794e6b3d146956, type: 3}
     color: {r: 0, g: 0, b: 0, a: 0}
   - keycode: 52
-    texture: {fileID: 0}
+    texture: {fileID: 2800000, guid: f696d7d86b277cc478593a4617703314, type: 3}
     color: {r: 0, g: 0, b: 0, a: 0}
   - keycode: 53
     texture: {fileID: 0}
-    color: {r: 0, g: 0, b: 0, a: 0}
+    color: {r: .485294104, g: .485294104, b: .485294104, a: 0}
   planetTag: Planet
   ratioScale: 1.10000002

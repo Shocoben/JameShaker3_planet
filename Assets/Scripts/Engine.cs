@@ -22,7 +22,7 @@ public class Engine : MonoBehaviour {
 			if (p == null)
 				continue;
 			float d = Vector3.Distance(transform.position,p.gameObject.transform.position);
-			if (d<p.distanceEffect) {
+			if (d<p.UpdateDistanceEffect()) {
 	 	 		Vector3 relativePos = p.gameObject.transform.position - transform.position;
         		Quaternion rotation = Quaternion.LookRotation(relativePos);
         		transform.rotation = Quaternion.Lerp(transform.rotation,rotation,Time.deltaTime*0.5f);				

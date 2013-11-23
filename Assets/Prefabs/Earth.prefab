@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: 1
+  distanceEffect: .5
   baseMassFactor: 10
   letter: 0
   id: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
   showLetter: 0
-  rayDistance: 1000
+  rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
