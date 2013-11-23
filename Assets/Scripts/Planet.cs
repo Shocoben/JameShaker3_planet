@@ -95,6 +95,12 @@ public class Planet : MonoBehaviour {
 	}
 	
 	
+	private int peopleToDestroyRocket = 1;
+	public bool canDestroyRocket()
+	{
+		return _people >= peopleToDestroyRocket;
+	}
+	
 	
 	void Update()
 	{
@@ -258,7 +264,8 @@ public class Planet : MonoBehaviour {
 		peopleComingToMe.Clear();
 		for (int j = 0; j < attachedRockets.Count; ++j)
 		{
-			attachedRockets[j].detachFromPlanet();
+			attachedRockets[j].startUrgenceEngine();
+			
 		}
 		attachedRockets.Clear();
 		GameObject.Destroy(this.gameObject);
@@ -303,7 +310,8 @@ public class Planet : MonoBehaviour {
 	
 	public void detachRocket(Capsule rocket)
 	{
-		attachedRockets.Remove(rocket);
+		if (attachedRockets.Contains(rocket))
+			attachedRockets.Remove(rocket);
 	}
 	
 }

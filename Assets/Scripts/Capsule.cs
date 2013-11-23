@@ -19,20 +19,69 @@ public class Capsule : MonoBehaviour {
 		
 	}
 	
+	private static int countInstance = 0;
+	public int ID =0;
 	void Start()
 	{
-		launch = GetComponent<Launcher>();	
+		launch = GetComponent<Launcher>();
+		ID = countInstance;
+		countInstance++;
 	}
-
+	
+	public float rayDistance = 100;
+	public LayerMask rayMask;
+	bool mouseTouchMe()
+	{
+		RaycastHit hit;
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		//Debug.DrawLine(ray.origin, ray.origin + ray.direction * rayDistance, Color.green, 1.5f);
+		if (Physics.Raycast(ray, out hit, rayDistance, rayMask.value))
+		{
+			if (hit.collider.gameObject.GetComponent<Capsule>().ID == ID)
+				return true;
+			return false;
+		}
+		return false;
+	}
 	
 	// Update is called once per frame
+	private bool _isDestroying = false;
+	private float _startDestroyTime = 0;
+	public float delayDestroy = 1;
+	
 	void Update ()
 	{	
-		if (attachedPlanet != null && lastGeneration + rate < Time.time)
+		if ( attachedPlanet != null && lastGeneration + rate < Time.time )
 		{
 			attachedPlanet.addPeople(peoplePerGeneration);
 			resetGeneration();
 		}
+		if (!_isDestroying && attachedPlanet != null && attachedPlanet.canDestroyRocket() && Input.GetMouseButtonUp(0) && mouseTouchMe() )
+		{
+			startDestroy();
+		}
+		
+		if (_isDestroying && _startDestroyTime + delayDestroy < Time.time)
+		{				
+			destroy();
+		}
+	}
+	
+	public void startDestroy()
+	{
+		_isDestroying = true;
+		_startDestroyTime = Time.time;
+		
+	}
+	
+	public void stopDestroy()
+	{
+		_isDestroying = false;
+	}
+	
+	public void destroy()
+	{
+		GameObject.Destroy(this.gameObject);
 	}
 	
 	public void setAttachedPlanet(Planet planet)
@@ -44,12 +93,18 @@ public class Capsule : MonoBehaviour {
 	public float urgenceLaunchStrength = 2;
 	public void detachFromPlanet()
 	{
-		if (attachedPlanet)
+		if (attachedPlanet != null)
 		{
 			attachedPlanet.detachRocket(this);
-			launch.activeEngine(urgenceLaunchStrength);
 		}
+		attachedPlanet = null;
 		
 	}
+	
+	public void startUrgenceEngine()
+	{
+		launch.activeEngine(urgenceLaunchStrength);	
+	}
+	
 
 }

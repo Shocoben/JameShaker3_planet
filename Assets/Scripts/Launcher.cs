@@ -14,6 +14,8 @@ public class Launcher : MonoBehaviour {
 	public bool controlsWhenFree = false;
 	public GameObject fbx;
 	
+	private Capsule _capsule;
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -21,6 +23,7 @@ public class Launcher : MonoBehaviour {
 		_lineRender.enabled = false;
 		_engine = GetComponent<Engine>();
 		_engine.enabled = false;
+		_capsule = GetComponent<Capsule>();
 	
 	}
 	public bool showNumber = false;
@@ -59,6 +62,8 @@ public class Launcher : MonoBehaviour {
 			if (Input.GetKeyUp(_letter)) 
 			{
 				activeEngine(_strenght);
+				
+				
 			} 
 			else if (Input.GetKeyDown(_letter))
 			{
@@ -90,7 +95,9 @@ public class Launcher : MonoBehaviour {
 		_lineRender.enabled = false;
 		transform.parent = null;
 		_engine.enabled = true;
-		_engine.speed = _strenght;	
+		_engine.speed = _strenght;
+		_capsule.stopDestroy();
+		_capsule.detachFromPlanet();
 	}
 	
 	LineRenderer _lineRender;
