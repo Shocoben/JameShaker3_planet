@@ -8,8 +8,8 @@ public class Planet : MonoBehaviour {
 	public float baseMassFactor = 10;
 	
 	
-	public TextMesh guiText;
-	public TextMesh percentText;
+	private TextMesh letterText;
+	private TextMesh percentText;
 	
 	public KeyCode letter;
 	private int _people;
@@ -33,6 +33,8 @@ public class Planet : MonoBehaviour {
 	
 	public int minimPeopleToExplodeRocket = 1;
 	
+	public GameObject pLetterPrefab;
+	public GameObject pPercentPrefab;
 	
 	
 	void Start()
@@ -42,8 +44,18 @@ public class Planet : MonoBehaviour {
 		instanceCount ++;
 		_people = peopleStart;
 		
-		if (letter != null && guiText != null)
-			guiText.text = letter.ToString();
+		GameObject pLetter = GameObject.Instantiate(pLetterPrefab, Vector3.zero, pLetterPrefab.transform.rotation) as GameObject;
+		pLetter.GetComponent<SnapObject>().oToSnap = this.transform;
+		letterText = pLetter.GetComponent<TextMesh>();
+		
+		GameObject pPercent = GameObject.Instantiate(pPercentPrefab, Vector3.zero, pPercentPrefab.transform.rotation) as GameObject;
+		pPercent.GetComponent<SnapObject>().oToSnap = this.transform;
+		percentText = pPercent.GetComponent<TextMesh>();
+		
+		if (letter != null && letterText != null)
+			letterText.text = letter.ToString();
+		
+
 	}
 	
 	public void addPeopleComingToMe(People people)
@@ -71,12 +83,14 @@ public class Planet : MonoBehaviour {
 				}
 				else
 				{
+					Debug.Log(this.letter);
 					selected.sendPeopleTo(this);
 					
 					selected = null;
 				}
 			}
 		}
+		
 		
 		if (selected != null && selected.id == id)
 		{
@@ -116,18 +130,18 @@ public class Planet : MonoBehaviour {
 	public void sendPeopleTo(Planet objectiv)
 	{
 		int nbrPeople = Mathf.FloorToInt(_people * (_percentPeople / 100));
-		Debug.Log(_people * (_percentPeople / 100));
 		
 		for (int i = 0; i < nbrPeople; ++i)
 		{
 			Vector3 direction = objectiv.transform.position - transform.position;
 			direction.Normalize();
 			
-			GameObject newPeople = GameObject.Instantiate(peoplePrefab, transform.position + direction * transform.localScale.x, Quaternion.identity) as GameObject;
+			GameObject newPeople = GameObject.Instantiate(peoplePrefab, transform.position + direction * transform.localScale.x , Quaternion.identity) as GameObject;
 			People nPol = newPeople.GetComponent<People>();
 			nPol.setTarget(objectiv);
-			
 		}
+		Debug.Log(nbrPeople);
+		
 		_percentPeople = 0;
 		addPeople(-nbrPeople);
 	}
@@ -144,7 +158,9 @@ public class Planet : MonoBehaviour {
 		{
 			onMaxPeople();	
 		}
-		float size = minSize + _people;
+		float size = _people;
+		if (size < minSize)
+			size = minSize;
 		transform.localScale = new Vector3(size, size, size);
 	}
 	
@@ -169,6 +185,7 @@ public class Planet : MonoBehaviour {
 			other.gameObject.GetComponent<Engine>().enabled) {
 			other.gameObject.GetComponent<Engine>().enabled = false;
 			other.gameObject.transform.parent = transform;
+			other.gameObject.transform.RotateAround(other.gameObject.transform.position,Vector3.up,180);
 		}
 	}
 

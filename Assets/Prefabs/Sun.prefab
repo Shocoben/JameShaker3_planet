@@ -93,7 +93,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceEffect: 2
-  massFactor: 20
+  baseMassFactor: 10
+  letter: 115
+  peopleStart: 1
+  peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
+  id: 0
+  maxPeople: 5
+  peopleSelectSpeed: 3
+  minimPeopleToExplodeRocket: 1
+  pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -101,7 +109,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
