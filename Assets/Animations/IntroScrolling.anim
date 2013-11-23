@@ -22,7 +22,12 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 10
+      - time: 16.9333324
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 19.9833336
         value: 0
         inSlope: 0
         outSlope: 0
@@ -38,13 +43,18 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: .775862098
-        inSlope: -.177586213
-        outSlope: -.177586213
+        inSlope: -.0888671577
+        outSlope: -.0888671577
         tangentMode: 10
-      - time: 10
+      - time: 16.9333324
+        value: -.72895503
+        inSlope: -.0888671651
+        outSlope: -.0888671651
+        tangentMode: 10
+      - time: 19.9833336
         value: -1
-        inSlope: -.177586213
-        outSlope: -.177586213
+        inSlope: -.0888671726
+        outSlope: -.0888671726
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -81,7 +91,12 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: 10
+      - time: 16.9333324
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 19.9833336
         value: 0
         inSlope: 0
         outSlope: 0
@@ -97,13 +112,18 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: .775862098
-        inSlope: -.177586213
-        outSlope: -.177586213
+        inSlope: -.0888671577
+        outSlope: -.0888671577
         tangentMode: 10
-      - time: 10
+      - time: 16.9333324
+        value: -.72895503
+        inSlope: -.0888671651
+        outSlope: -.0888671651
+        tangentMode: 10
+      - time: 19.9833336
         value: -1
-        inSlope: -.177586213
-        outSlope: -.177586213
+        inSlope: -.0888671726
+        outSlope: -.0888671726
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -112,4 +132,11 @@ AnimationClip:
     classID: 21
     script: {fileID: 0}
   m_EulerEditorCurves: []
-  m_Events: []
+  m_Events:
+  - time: 16.9333324
+    functionName: LaunchGame
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
