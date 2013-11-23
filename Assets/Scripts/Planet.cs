@@ -185,8 +185,19 @@ public class Planet : MonoBehaviour {
 			other.gameObject.GetComponent<Engine>().enabled) {
 			other.gameObject.GetComponent<Engine>().enabled = false;
 			other.gameObject.transform.parent = transform;
-			other.gameObject.transform.RotateAround(other.gameObject.transform.position,Vector3.up,180);
+			
+			RaycastHit hit = new RaycastHit();
+			if (Physics.Raycast(
+				other.gameObject.transform.position,
+				transform.position-other.gameObject.transform.position,
+				out hit)) {
+				other.gameObject.transform.rotation = Quaternion.LookRotation(hit.normal);
+				Vector3 dir = (other.gameObject.transform.position-transform.position);
+				dir.Normalize();
+				other.gameObject.transform.position = transform.position + dir * transform.localScale.x*.5f + dir * other.gameObject.transform.localScale.x*.5f;
+			}
+			
 		}
 	}
-
+	
 }
