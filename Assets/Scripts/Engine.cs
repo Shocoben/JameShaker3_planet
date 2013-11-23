@@ -19,6 +19,8 @@ public class Engine : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		foreach (Planet p in _planets) {
+			if (p == null)
+				continue;
 			float d = Vector3.Distance(transform.position,p.gameObject.transform.position);
 			if (d<p.distanceEffect) {
 	 	 		Vector3 relativePos = p.gameObject.transform.position - transform.position;

@@ -19,11 +19,7 @@ public class Launcher : MonoBehaviour {
 	void Update () {
 		if (_touched) {			
 			if (Input.GetMouseButtonUp(0)) {
-				_lineRender.enabled = false;
-				_touched = false;
-				transform.parent = null;
-				_engine.enabled = true;
-				_engine.speed = _strenght;
+				activeEngine(_strenght);
 			} else {
 				if (timed) {
 					float t = Mathf.Clamp(Time.time-_timeOrigine,0,maxTime);
@@ -35,6 +31,15 @@ public class Launcher : MonoBehaviour {
 				_lineRender.SetPosition(1,transform.position+transform.forward*_strenght);
 			}
 		}
+	}
+	
+	public void activeEngine(float strenght)
+	{
+		_lineRender.enabled = false;
+		_touched = false;
+		transform.parent = null;
+		_engine.enabled = true;
+		_engine.speed = _strenght;	
 	}
 	
 	void OnMouseDown() {

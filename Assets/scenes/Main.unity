@@ -120,11 +120,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceEffect: 1
   baseMassFactor: 10
-  letter: 105
+  letter: 117
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 10
+  maxPeople: 2
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 1
@@ -282,11 +282,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: letter
-      value: 117
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
-      propertyPath: maxPeople
-      value: 10
+      value: 111
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -352,17 +348,13 @@ Prefab:
       propertyPath: angle
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
-      propertyPath: letter
-      value: 97
-      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
-      propertyPath: maxPeople
-      value: 10
+      propertyPath: letter
+      value: 97
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -415,11 +407,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceEffect: 1
   baseMassFactor: 10
-  letter: 121
+  letter: 114
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 10
+  maxPeople: 2
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 1
@@ -703,11 +695,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: letter
-      value: 122
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
-      propertyPath: maxPeople
-      value: 10
+      value: 101
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -846,11 +834,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: letter
-      value: 105
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
-      propertyPath: maxPeople
-      value: 10
+      value: 117
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -918,11 +902,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: letter
-      value: 114
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
-      propertyPath: maxPeople
-      value: 10
+      value: 121
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -979,7 +959,7 @@ MonoBehaviour:
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 10
+  maxPeople: 2
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 1
@@ -1264,10 +1244,6 @@ Prefab:
       propertyPath: letter
       value: 116
       objectReference: {fileID: 0}
-    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
-      propertyPath: maxPeople
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 926972951}
@@ -1323,7 +1299,7 @@ MonoBehaviour:
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 10
+  maxPeople: 2
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 1
@@ -1639,11 +1615,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceEffect: 1
   baseMassFactor: 10
-  letter: 101
+  letter: 122
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 10
+  maxPeople: 2
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 1
@@ -1786,11 +1762,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceEffect: 1
   baseMassFactor: 10
-  letter: 111
+  letter: 105
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 10
+  maxPeople: 2
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 1
@@ -1913,8 +1889,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2049225627}
-  - {fileID: 1367613257}
   - {fileID: 68897034}
+  - {fileID: 1367613257}
   m_Father: {fileID: 0}
 --- !u!1001 &1483743711
 Prefab:
@@ -1977,11 +1953,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: letter
-      value: 111
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
-      propertyPath: maxPeople
-      value: 10
+      value: 105
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -2034,11 +2006,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceEffect: 1
   baseMassFactor: 10
-  letter: 122
+  letter: 101
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 10
+  maxPeople: 2
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 1
@@ -2332,11 +2304,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceEffect: 1
   baseMassFactor: 10
-  letter: 114
+  letter: 121
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 10
+  maxPeople: 2
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 1
@@ -2506,11 +2478,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: letter
-      value: 121
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
-      propertyPath: maxPeople
-      value: 10
+      value: 114
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -2620,11 +2588,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: letter
-      value: 101
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
-      propertyPath: maxPeople
-      value: 10
+      value: 122
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -2677,11 +2641,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceEffect: 1
   baseMassFactor: 10
-  letter: 117
+  letter: 111
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 10
+  maxPeople: 2
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 1

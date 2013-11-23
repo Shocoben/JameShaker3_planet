@@ -142,8 +142,6 @@ public class Planet : MonoBehaviour {
 	public void sendPeopleTo(Planet objectiv)
 	{
 		int nbrPeople = Mathf.FloorToInt(_people * (_percentPeople / 100));
-		
-		Debug.Log(nbrPeople);
 		for (int i = 0; i < nbrPeople; ++i)
 		{
 			Vector3 direction = objectiv.transform.position - transform.position;
@@ -190,8 +188,9 @@ public class Planet : MonoBehaviour {
 		peopleComingToMe.Clear();
 		for (int j = 0; j < attachedRockets.Count; ++j)
 		{
-			attachedRockets[j].transform.parent = null;
+			attachedRockets[j].detachFromPlanet();
 		}
+		attachedRockets.Clear();
 		GameObject.Destroy(this.gameObject);
 	}
 	
@@ -232,6 +231,10 @@ public class Planet : MonoBehaviour {
 		attachedRockets.Add(rocket);	
 	}
 	
+	public void detachRocket(Capsule rocket)
+	{
+		attachedRockets.Remove(rocket);
+	}
 	
 	
 }

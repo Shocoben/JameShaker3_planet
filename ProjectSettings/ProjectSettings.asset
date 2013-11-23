@@ -64,11 +64,11 @@ PlayerSettings:
     width: 0
     height: 0
   m_SupportedAspectRatios:
-    4:3: 1
-    5:4: 1
-    16:10: 1
+    4:3: 0
+    5:4: 0
+    16:10: 0
     16:9: 1
-    Others: 1
+    Others: 0
   iPhoneBundleIdentifier: com.Company.ProductName
   productGUID: f2a3967ccc89b9d4abf0249bda67b862
   iPhoneBundleVersion: 1.0
@@ -103,7 +103,11 @@ PlayerSettings:
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
   resolutionDialogBanner: {fileID: 0}
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - m_Icon: {fileID: 0}
+      m_Size: 128
   m_BuildTargetBatching: []
   webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
@@ -141,7 +145,10 @@ PlayerSettings:
   ps3SaveGameSlots: 1
   ps3TrialMode: 0
   flashStrippingLevel: 2
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    data:
+      first: 1
+      second: 
   metroPackageName: JamShaker3
   metroPackageLogo: 
   metroPackageVersion: 
