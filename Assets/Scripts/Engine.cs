@@ -26,7 +26,7 @@ public class Engine : MonoBehaviour {
         		transform.rotation = Quaternion.Lerp(transform.rotation,rotation,Time.deltaTime*0.5f);				
 			}
 		}
-		transform.Translate(Vector3.forward * speed * Time.deltaTime);		
+		transform.Translate(Vector3.forward * speed * Time.deltaTime);
 	}
 	
 	void OnBecameInvisible() {
