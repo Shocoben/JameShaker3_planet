@@ -36,6 +36,7 @@ public class Planet : MonoBehaviour {
 	public GameObject pLetterPrefab;
 	public GameObject pPercentPrefab;
 	
+	public float sizeFactor = 0.2f;
 	
 	void Start()
 	{
@@ -55,7 +56,11 @@ public class Planet : MonoBehaviour {
 		if (letter != null && letterText != null)
 			letterText.text = letter.ToString();
 		
-
+		if (pPercent != null)
+		{
+			pPercent.SetActive(false);	
+		}
+		resizeWithPeople();
 	}
 	
 	public void addPeopleComingToMe(People people)
@@ -83,9 +88,8 @@ public class Planet : MonoBehaviour {
 				}
 				else
 				{
-					Debug.Log(this.letter);
 					selected.sendPeopleTo(this);
-					
+					selected.onDeselect();	
 					selected = null;
 				}
 			}
@@ -97,6 +101,7 @@ public class Planet : MonoBehaviour {
 			if (Input.GetKeyDown(KeyCode.Space))
 			{
 				_percentPeople = 0;
+				percentText.gameObject.SetActive(true);
 			}
 			else if (Input.GetKey(KeyCode.Space))
 			{
@@ -111,20 +116,25 @@ public class Planet : MonoBehaviour {
 			}
 			else if (Input.GetKeyUp(KeyCode.Space))
 			{
-				_percentPeople = 0;	
+				_percentPeople = 0;
+				percentText.gameObject.SetActive(false);
 			}
 			
 			if (_percentPeople > 100)
 			{
 				_percentPeople = 100;	
 			}
-			
 		}
 		
 		if (percentText != null)
 		{
 			percentText.text = Mathf.Floor(_percentPeople) + "%";
 		}
+	}
+	
+	public void onDeselect()
+	{
+		percentText.gameObject.SetActive(false);
 	}
 	
 	public void sendPeopleTo(Planet objectiv)
@@ -140,7 +150,6 @@ public class Planet : MonoBehaviour {
 			People nPol = newPeople.GetComponent<People>();
 			nPol.setTarget(objectiv);
 		}
-		Debug.Log(nbrPeople);
 		
 		_percentPeople = 0;
 		addPeople(-nbrPeople);
@@ -158,12 +167,15 @@ public class Planet : MonoBehaviour {
 		{
 			onMaxPeople();	
 		}
-		float size = _people;
-		if (size < minSize)
-			size = minSize;
-		transform.localScale = new Vector3(size, size, size);
+		
+		resizeWithPeople();
 	}
 	
+	public void resizeWithPeople()
+	{
+		float size = minSize + _people * sizeFactor;
+		transform.localScale = new Vector3(size, size, size);
+	}
 	
 	public void onMaxPeople()
 	{
