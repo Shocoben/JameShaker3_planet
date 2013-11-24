@@ -161,8 +161,8 @@ MonoBehaviour:
   rayMask:
     serializedVersion: 2
     m_Bits: 256
-  nbrPeopleSentPerRate: 5
-  sendRate: 1
+  nbrPeopleSentPerRate: 2
+  sendRate: .100000001
   ratio: .25
   attachedRockets: []
 --- !u!135 &13500000

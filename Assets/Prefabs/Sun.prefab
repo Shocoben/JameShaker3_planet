@@ -81,6 +81,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89b7726e10374246a26514f5ffdc84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceEffect: 2
+  baseMassFactor: 10
+  letter: 0
+  explosionFX: {fileID: 0}
+  id: 0
+  peopleStart: 1
+  peoplePrefab: {fileID: 0}
+  maxPeople: 5
+  maxRadius: 1.5
+  peopleSelectSpeed: 3
+  minimPeopleToExplodeRocket: 1
+  pLetterPrefab: {fileID: 0}
+  pPercentPrefab: {fileID: 0}
+  atmosphere: {fileID: 0}
+  sizeFactor: .200000003
+  showLetter: 0
+  rayDistance: 100
+  rayMask:
+    serializedVersion: 2
+    m_Bits: 0
+  nbrPeopleSentPerRate: 0
+  sendRate: 1
+  ratio: 0
+  attachedRockets: []
+  SUNCLASS: 
+  rate: .5
+  peopleToDestroyPerRate: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,6 +122,7 @@ MonoBehaviour:
   distanceEffect: -1
   baseMassFactor: 10
   letter: 115
+  explosionFX: {fileID: 0}
   id: 0
   peopleStart: 1
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
@@ -104,7 +132,9 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 1
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .200000003
+  showLetter: 0
   rayDistance: 100
   rayMask:
     serializedVersion: 2

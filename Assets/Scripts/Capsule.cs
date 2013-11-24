@@ -30,6 +30,7 @@ public class Capsule : MonoBehaviour {
 		ID = countInstance;
 		countInstance++;
 		_anim = GetComponent<Animation>();
+		_anim["jumpingPeople"].speed = rate;
 	}
 	
 	public float rayDistance = 100;
@@ -50,8 +51,8 @@ public class Capsule : MonoBehaviour {
 	
 	// Update is called once per frame
 	private bool _isDestroying = false;
-	private float _startDestroyTime = 0;
-	public float delayDestroy = 1;
+	public float _destroyTime = 1;
+	private float _currentDestroyTime = 1;
 	
 	void Update ()
 	{
@@ -62,13 +63,31 @@ public class Capsule : MonoBehaviour {
 			resetGeneration();
 		}*/
 		
-		if (!_isDestroying && attachedPlanet != null && attachedPlanet.canDestroyRocket() && Input.GetMouseButtonUp(0) && mouseTouchMe() )
+		if (!_isDestroying && attachedPlanet != null && attachedPlanet.canDestroyRocket() && Input.GetMouseButtonDown(0) && mouseTouchMe() )
 		{
 			startDestroy();
 		}
 		
-		if (_isDestroying && _startDestroyTime + delayDestroy < Time.time)
-		{				
+		if (_isDestroying && Input.GetMouseButtonUp(0))
+		{
+			_isDestroying = false;
+		}
+		
+		if (_isDestroying && !mouseTouchMe())
+		{
+			_currentDestroyTime = _destroyTime;
+			stopDestroy();
+		}
+		
+		if (_isDestroying && mouseTouchMe())
+		{
+			startDestroy();
+			_currentDestroyTime -= Time.deltaTime;
+		}
+		
+		if (_currentDestroyTime <= 0)
+		{
+			_currentDestroyTime = _destroyTime;
 			destroy();
 		}
 	}
@@ -86,14 +105,17 @@ public class Capsule : MonoBehaviour {
 	public void startDestroy()
 	{
 		_isDestroying = true;
-		_startDestroyTime = Time.time;
+		_anim["scaling"].enabled = true;
 		_anim.Play("scaling");
 		
 	}
 	
 	public void stopDestroy()
 	{
-		_isDestroying = false;
+		_anim["scaling"].time = 0;
+		_anim.Sample();
+		_anim["scaling"].enabled = false;
+		
 	}
 	
 	public void destroy()

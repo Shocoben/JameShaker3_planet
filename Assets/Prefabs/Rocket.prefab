@@ -264,17 +264,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2228b6503f042b4296d5bd3d1e58faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: .5
+  rate: 5
   lastGeneration: 0
-  peoplePerGeneration: 2
+  peoplePerGeneration: 1
   explosionFX: {fileID: 100008, guid: 8a7424826f320f34a92d6558daa2188f, type: 2}
   ID: 0
   rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 512
-  delayDestroy: 1
-  urgenceLaunchStrength: 2
+  _destroyTime: .5
+  urgenceLaunchStrength: 10
   people: {fileID: 100006}
 --- !u!114 &11400006
 MonoBehaviour:
@@ -308,6 +308,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53e8e103f0eefb349917fe59ed7e98a7, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   m_EditorClassIdentifier: 
   m_EditorClassIdentifier: 
   m_EditorClassIdentifier: 
