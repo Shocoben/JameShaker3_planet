@@ -7,6 +7,7 @@ public class Engine : MonoBehaviour {
 	public string planetTag;
 	public string sunTag;
 	public GameObject trailFX;
+	public GameObject rocketMesh;
 	
 	// Use this for initialization
 	void Start () {
@@ -44,16 +45,20 @@ public class Engine : MonoBehaviour {
 				continue;
 			float d = Vector3.Distance(transform.position,p.gameObject.transform.position);
 			if (d<p.UpdateDistanceEffect()) {
-	 	 		Vector3 relativePos = transform.position - p.gameObject.transform.position;
+	 	 		/*Vector3 relativePos = transform.position - p.gameObject.transform.position;
         		Quaternion rotation = Quaternion.LookRotation(relativePos);
-        		transform.rotation = Quaternion.Lerp(transform.rotation,rotation,Time.deltaTime*0.5f);				
+        		transform.rotation = Quaternion.Lerp(transform.rotation,rotation,Time.deltaTime*0.5f);*/			
+				transform.Translate(-Vector3.right * speed * Time.deltaTime * 10);
 			}
 		}
+		
+		transform.position = new Vector3(transform.position.x,0,transform.position.z);
 	}
 	
 	void OnEnable()	
 	{
 		trailFX.SetActive(true);
+		rocketMesh.renderer.material.color = Color.white;
 	}
 	void OnDisable()	
 	{
