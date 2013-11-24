@@ -135,7 +135,6 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
-  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -561,7 +560,6 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
-  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -2878,7 +2876,6 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
-  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -3223,7 +3220,6 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
-  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -3679,7 +3675,6 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
-  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -3837,7 +3832,6 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
-  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -4116,7 +4110,6 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
-  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -4736,7 +4729,6 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .200000003
   showLetter: 0
-  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -5047,7 +5039,6 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
-  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -5906,7 +5897,6 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
-  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
