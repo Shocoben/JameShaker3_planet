@@ -56,12 +56,6 @@ public class Capsule : MonoBehaviour {
 	void Update ()
 	{
 		
-		/*if ( attachedPlanet != null && lastGeneration + rate < Time.time )
-		{
-			attachedPlanet.addPeople(peoplePerGeneration);
-			resetGeneration();
-		}*/
-		
 		if (!_isDestroying && attachedPlanet != null && attachedPlanet.canDestroyRocket() && Input.GetMouseButtonUp(0) && mouseTouchMe() )
 		{
 			startDestroy();
@@ -123,6 +117,7 @@ public class Capsule : MonoBehaviour {
 			attachedPlanet.detachRocket(this);
 		}
 		attachedPlanet = null;
+		transform.parent = null;
 		stopAnimation();
 		
 	}

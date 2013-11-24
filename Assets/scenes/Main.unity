@@ -172,7 +172,7 @@ MonoBehaviour:
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 50
+  maxPeople: 5
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
@@ -398,7 +398,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: maxPeople
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
@@ -498,7 +498,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: maxPeople
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
@@ -655,7 +655,7 @@ MonoBehaviour:
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 50
+  maxPeople: 5
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
@@ -1206,7 +1206,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: maxPeople
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
@@ -2691,7 +2691,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: maxPeople
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
@@ -2788,7 +2788,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: maxPeople
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
@@ -2953,7 +2953,7 @@ MonoBehaviour:
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 50
+  maxPeople: 5
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
@@ -3234,7 +3234,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: maxPeople
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
@@ -3301,7 +3301,7 @@ MonoBehaviour:
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 50
+  maxPeople: 5
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
@@ -3732,7 +3732,7 @@ MonoBehaviour:
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 50
+  maxPeople: 5
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
@@ -3889,7 +3889,7 @@ MonoBehaviour:
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 50
+  maxPeople: 5
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
@@ -4134,7 +4134,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: maxPeople
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
@@ -4202,7 +4202,7 @@ MonoBehaviour:
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 50
+  maxPeople: 5
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
@@ -5199,7 +5199,7 @@ MonoBehaviour:
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 50
+  maxPeople: 5
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
@@ -5498,7 +5498,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: maxPeople
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
@@ -5681,7 +5681,7 @@ Prefab:
       objectReference: {fileID: 100008, guid: 8a7424826f320f34a92d6558daa2188f, type: 2}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: maxPeople
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: speed
@@ -6051,7 +6051,7 @@ MonoBehaviour:
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 50
+  maxPeople: 5
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30

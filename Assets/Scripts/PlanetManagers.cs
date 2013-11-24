@@ -43,6 +43,7 @@ public class PlanetManagers : MonoBehaviour {
 			GameObject planet = planets[rand];
 			Vector3 pos = planet.transform.position;
 			pos.x += planet.transform.localScale.x * ratioScale;
+			
 			GameObject rocket = GameObject.Instantiate(rocketPrefab, pos, rocketPrefab.transform.rotation) as GameObject;
 			rocket.transform.parent = planet.transform;
 			rocket.GetComponent<Capsule>().setAttachedPlanet(planet.GetComponent<Planet>());
