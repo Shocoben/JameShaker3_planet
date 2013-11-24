@@ -186,8 +186,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   nbrPeopleSentPerRate: 5
-  sendRate: 1
-  ratio: .25
+  sendRate: .100000001
   attachedRockets: []
 --- !u!114 &68897036
 MonoBehaviour:
@@ -491,6 +490,10 @@ Prefab:
       propertyPath: maxRadius
       value: 1.79999995
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: nbrPeopleSentPerRate
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 2049225626}
@@ -598,6 +601,10 @@ Prefab:
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: maxRadius
       value: 1.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: nbrPeopleSentPerRate
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -756,8 +763,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   nbrPeopleSentPerRate: 5
-  sendRate: 1
-  ratio: .25
+  sendRate: .100000001
   attachedRockets: []
 --- !u!114 &187401195
 MonoBehaviour:
@@ -1302,6 +1308,10 @@ Prefab:
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: maxRadius
       value: 1.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: nbrPeopleSentPerRate
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -2852,6 +2862,10 @@ Prefab:
       propertyPath: maxRadius
       value: 1.79999995
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: nbrPeopleSentPerRate
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -2952,6 +2966,10 @@ Prefab:
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: maxRadius
       value: 1.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: nbrPeopleSentPerRate
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -3191,8 +3209,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   nbrPeopleSentPerRate: 5
-  sendRate: 1
-  ratio: .25
+  sendRate: .100000001
   attachedRockets: []
 --- !u!114 &763270709
 MonoBehaviour:
@@ -3472,6 +3489,10 @@ Prefab:
       propertyPath: maxRadius
       value: 1.79999995
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: nbrPeopleSentPerRate
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 926972951}
@@ -3543,8 +3564,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   nbrPeopleSentPerRate: 5
-  sendRate: 1
-  ratio: .25
+  sendRate: .100000001
   attachedRockets: []
 --- !u!114 &926972954
 MonoBehaviour:
@@ -4038,8 +4058,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   nbrPeopleSentPerRate: 5
-  sendRate: 1
-  ratio: .25
+  sendRate: .100000001
   attachedRockets: []
 --- !u!114 &1257977283
 MonoBehaviour:
@@ -4195,8 +4214,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   nbrPeopleSentPerRate: 5
-  sendRate: 1
-  ratio: .25
+  sendRate: .100000001
   attachedRockets: []
 --- !u!114 &1367613259
 MonoBehaviour:
@@ -4440,6 +4458,10 @@ Prefab:
       propertyPath: maxRadius
       value: 1.79999995
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: nbrPeopleSentPerRate
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -4512,8 +4534,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   nbrPeopleSentPerRate: 5
-  sendRate: 1
-  ratio: .25
+  sendRate: .100000001
   attachedRockets: []
 --- !u!114 &1498185814
 MonoBehaviour:
@@ -5187,7 +5208,6 @@ MonoBehaviour:
     m_Bits: 256
   nbrPeopleSentPerRate: 0
   sendRate: 1
-  ratio: 0
   attachedRockets: []
   SUNCLASS: '---------------------------------------'
   rate: 1
@@ -5511,8 +5531,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   nbrPeopleSentPerRate: 5
-  sendRate: 1
-  ratio: .25
+  sendRate: .100000001
   attachedRockets: []
 --- !u!114 &1872903285
 MonoBehaviour:
@@ -5810,6 +5829,10 @@ Prefab:
       propertyPath: maxRadius
       value: 1.79999995
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: nbrPeopleSentPerRate
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 187401192}
@@ -6000,6 +6023,10 @@ Prefab:
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: maxRadius
       value: 1.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: nbrPeopleSentPerRate
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -6371,8 +6398,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   nbrPeopleSentPerRate: 5
-  sendRate: 1
-  ratio: .25
+  sendRate: .100000001
   attachedRockets: []
 --- !u!114 &2049225629
 MonoBehaviour:
@@ -6471,6 +6497,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2099989265}
   - 114: {fileID: 2099989266}
+  - 114: {fileID: 2099989267}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -6517,6 +6544,29 @@ MonoBehaviour:
   - keycode: 52
     padCode: 330
     texture: {fileID: 2800000, guid: f696d7d86b277cc478593a4617703314, type: 3}
+    color: {r: 0, g: 0, b: 0, a: 0}
+  planetTag: Planet
+  ratioScale: 1.10000002
+--- !u!114 &2099989267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2099989264}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c841504c7ef4f4387b0ab20f3f0241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketPrefab: {fileID: 100000, guid: db1c78934b1cf3a4baee412b4cba3bf5, type: 2}
+  rocketTouches:
+  - keycode: 49
+    padCode: 332
+    texture: {fileID: 2800000, guid: acdecc39d0c96194fb4df3cb71401b79, type: 3}
+    color: {r: 0, g: 0, b: 0, a: 0}
+  - keycode: 50
+    padCode: 333
+    texture: {fileID: 2800000, guid: 96c562767f6340b418bceaa4a6ca4a59, type: 3}
     color: {r: 0, g: 0, b: 0, a: 0}
   planetTag: Planet
   ratioScale: 1.10000002
