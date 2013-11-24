@@ -31,6 +31,7 @@ public class PlanetManagers : MonoBehaviour {
 			{
 				
 				rand = Random.Range(0, planets.Length-1);
+				
 				if (selectedPlanets.Add(Mathf.FloorToInt(rand)))
 				{
 					break;
