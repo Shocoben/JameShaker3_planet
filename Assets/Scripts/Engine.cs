@@ -7,6 +7,7 @@ public class Engine : MonoBehaviour {
 	public string planetTag;
 	public string sunTag;
 	public GameObject trailFX;
+	public GameObject rocketMesh;
 	
 	// Use this for initialization
 	void Start () {
@@ -54,6 +55,7 @@ public class Engine : MonoBehaviour {
 	void OnEnable()	
 	{
 		trailFX.SetActive(true);
+		rocketMesh.renderer.material.color = Color.white;
 	}
 	void OnDisable()	
 	{
