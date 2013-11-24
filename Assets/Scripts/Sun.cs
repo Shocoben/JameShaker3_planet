@@ -8,8 +8,6 @@ public class Sun : Planet {
 	private float _lastDestroy = 0;
 	public int peopleToDestroyPerRate = 1;
 	
-	
-	
 	public override void Update ()
 	{
 		base.Update ();

@@ -16,6 +16,8 @@ public class PlanetManagers : MonoBehaviour {
 	public GameObject rocketPrefab;
 	public TouchConfig[] rocketTouches;
 	public string planetTag = "Planet";
+	public Texture2D planetWin;
+	public Texture2D rocketWin;
 	
 	public float ratioScale = 1.25f;
 	// Use this for initialization
@@ -96,6 +98,48 @@ public class PlanetManagers : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (_state!=State.none) {
+			return;
+		}
+		
+		if (Capsule.count<=0) {
+			Debug.Log("rocket loose");
+			_state = State.planetWin;
+			return;
+			
+		}
+		if (Planet.count<=0) {
+			Debug.Log("planet loose");
+			_state = State.rocketWin;
+		} else if (Planet.count==1) {
+			GameObject[] s = GameObject.FindGameObjectsWithTag("Sun");
+			if (s.Length>0) {
+				Debug.Log("planet loose sun");
+				_state = State.rocketWin;
+			}
+		}
 	}
+	
+	void OnGUI()
+	{
+		if (_state!=State.none) {		
+		  GUI.DrawTexture(
+			new Rect(
+				(Screen.width-Screen.width*0.3f)/2,
+				(Screen.height-Screen.width*0.3f)/2,
+				Screen.width*0.3f, Screen.width*0.3f
+			),
+			_state==State.planetWin?planetWin:rocketWin);
+		}
+	}
+	
+	enum State
+	{
+		none,
+		planetWin,
+		rocketWin
+	}
+	
+	State _state = State.none;
+	
 }
