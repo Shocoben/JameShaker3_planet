@@ -40,7 +40,7 @@ public class Engine : MonoBehaviour {
 		}
 		transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
-		foreach (Planet p in _suns) {
+		/*foreach (Planet p in _suns) {
 			if (p == null)
 				continue;
 			float d = Vector3.Distance(transform.position,p.gameObject.transform.position);
@@ -48,9 +48,9 @@ public class Engine : MonoBehaviour {
 	 	 		/*Vector3 relativePos = transform.position - p.gameObject.transform.position;
         		Quaternion rotation = Quaternion.LookRotation(relativePos);
         		transform.rotation = Quaternion.Lerp(transform.rotation,rotation,Time.deltaTime*0.5f);*/			
-				transform.Translate(-Vector3.right * speed * Time.deltaTime * 10);
-			}
-		}
+				//transform.Translate(-Vector3.right * speed * Time.deltaTime * 10);
+			/*}
+		}*/
 		
 		transform.position = new Vector3(transform.position.x,0,transform.position.z);
 	}
