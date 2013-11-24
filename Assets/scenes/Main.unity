@@ -131,8 +131,10 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 1
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -474,8 +476,10 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 1
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -2410,8 +2414,10 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 1
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -2520,7 +2526,7 @@ GameObject:
   - 23: {fileID: 781506325}
   m_Layer: 0
   m_Name: Sun
-  m_TagString: Planet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2712,8 +2718,10 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 1
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -2902,6 +2910,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300000, guid: 9a01cae36d098244291a835295e2d4ec, type: 3}
+    - target: {fileID: 100000, guid: e3912718a3859c44d8a5056474c7cb7d, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 13500000, guid: e3912718a3859c44d8a5056474c7cb7d, type: 2}
     - {fileID: 11400000, guid: e3912718a3859c44d8a5056474c7cb7d, type: 2}
@@ -3052,8 +3064,10 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 1
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -3207,8 +3221,10 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 1
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -3483,8 +3499,10 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 1
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -3896,8 +3914,10 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 1
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .200000003
   showLetter: 0
+  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -4011,8 +4031,10 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 1
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
@@ -4589,8 +4611,10 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 1
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  spawnRocket: 1
   rayDistance: 100
   rayMask:
     serializedVersion: 2
