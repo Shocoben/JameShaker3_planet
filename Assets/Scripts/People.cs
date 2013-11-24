@@ -34,7 +34,6 @@ public class People : MonoBehaviour {
 		if (other.tag == planetTag || other.tag == sunTag)
 		{
 			Planet o = other.GetComponent<Planet>();
-			Debug.Log(o.id);
 			if (o != null && o.id == _target.id)
 			{
 				o.addPeople(1);

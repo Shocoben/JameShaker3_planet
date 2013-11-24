@@ -57,19 +57,21 @@ public class Planet : MonoBehaviour {
 			letterText = pLetter.GetComponent<TextMesh>();
 			if (letter != null && letterText != null)
 				letterText.text = letter.ToString();
+			
+			GameObject pPercent = GameObject.Instantiate(pPercentPrefab, Vector3.zero, pPercentPrefab.transform.rotation) as GameObject;
+			pPercent.GetComponent<SnapObject>().oToSnap = this.transform;
+			percentText = pPercent.GetComponent<TextMesh>();
+			
+	
+			
+			if (pPercent != null)
+			{
+				pPercent.SetActive(false);	
+			}
 		}
 		
-		
-		GameObject pPercent = GameObject.Instantiate(pPercentPrefab, Vector3.zero, pPercentPrefab.transform.rotation) as GameObject;
-		pPercent.GetComponent<SnapObject>().oToSnap = this.transform;
-		percentText = pPercent.GetComponent<TextMesh>();
 		
 
-		
-		if (pPercent != null)
-		{
-			pPercent.SetActive(false);	
-		}
 		resizeWithPeople();
 	}
 	
@@ -121,9 +123,6 @@ public class Planet : MonoBehaviour {
 		}
 		else if ( Input.GetMouseButton(0) )
 		{
-			if (mouseTouchMe() && selected != null)
-				Debug.Log(selected.id + " id " + id);
-			
 			if (mouseTouchMe() && selected != null && selected.id != id)
 			{
 				selected.sendPeopleTo(this);	
@@ -265,10 +264,12 @@ public class Planet : MonoBehaviour {
 			peopleComingToMe[i].setTarget(null);
 		}
 		peopleComingToMe.Clear();
-		for (int j = 0; j < attachedRockets.Count; ++j)
+		
+		Capsule[] rocketsToDetach = new Capsule[attachedRockets.Count];
+		attachedRockets.CopyTo(rocketsToDetach);
+		for (int j = 0; j < rocketsToDetach.Length; ++j)
 		{
-			attachedRockets[j].startUrgenceEngine();
-			
+			rocketsToDetach[j].startUrgenceEngine();
 		}
 		attachedRockets.Clear();
 		Instantiate(explosionFX, transform.position, Quaternion.Euler(Vector3.right * 90) );
@@ -280,11 +281,14 @@ public class Planet : MonoBehaviour {
 		return baseMassFactor * (1 + _people);
 	}
 	
-	public float ratio;
 	public List<Capsule> attachedRockets = new List<Capsule>();
 	
 	void OnTriggerEnter(Collider other)
 	{
+		if (tag=="Sun") {
+			return;
+		}
+		
 		if (other.gameObject.GetComponent<Engine>()!=null &&
 			other.gameObject.GetComponent<Engine>().enabled) {
 			other.gameObject.GetComponent<Engine>().enabled = false;
@@ -300,7 +304,7 @@ public class Planet : MonoBehaviour {
 				other.gameObject.transform.rotation = Quaternion.LookRotation(hit.normal);
 				Vector3 dir = (other.gameObject.transform.position-transform.position);
 				dir.Normalize();
-				other.gameObject.transform.position = transform.position + (dir * transform.localScale.x * .5f) + (dir * other.gameObject.transform.localScale.x*ratio);
+				other.gameObject.transform.position = transform.position + (dir * transform.localScale.x * .5f) + (dir * other.gameObject.transform.localScale.x*0.25f);
 			}
 			other.gameObject.transform.parent = transform;
 			
