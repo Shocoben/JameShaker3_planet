@@ -900,6 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c9cefba65980b478d6b0b622f4f74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveWithParentScale: 0
 --- !u!114 &195075780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -956,6 +957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c9cefba65980b478d6b0b622f4f74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveWithParentScale: 0
 --- !u!114 &271639882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1012,6 +1014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c9cefba65980b478d6b0b622f4f74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveWithParentScale: 0
 --- !u!114 &288701264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1365,6 +1368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c9cefba65980b478d6b0b622f4f74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveWithParentScale: 0
 --- !u!114 &501085250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2677,6 +2681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c9cefba65980b478d6b0b622f4f74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveWithParentScale: 0
 --- !u!114 &648618953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4754,6 +4759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c9cefba65980b478d6b0b622f4f74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveWithParentScale: 0
 --- !u!114 &1594411544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5176,7 +5182,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1763861832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -.86781311, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 648618954}
@@ -5418,6 +5424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c9cefba65980b478d6b0b622f4f74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveWithParentScale: 0
 --- !u!114 &1828140129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6163,6 +6170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c9cefba65980b478d6b0b622f4f74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveWithParentScale: 0
 --- !u!114 &1980397081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6219,6 +6227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c9cefba65980b478d6b0b622f4f74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveWithParentScale: 0
 --- !u!114 &1991872643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6275,6 +6284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c9cefba65980b478d6b0b622f4f74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveWithParentScale: 0
 --- !u!114 &2000324662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6576,6 +6586,9 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: f696d7d86b277cc478593a4617703314, type: 3}
     color: {r: 0, g: 0, b: 0, a: 0}
   planetTag: Planet
+  planetWin: {fileID: 2800000, guid: 9cb6986c49d1c1442bd710b808656162, type: 3}
+  rocketWin: {fileID: 2800000, guid: 38d83fa8e24e5b04881b807c7982e00c, type: 3}
+  waitEndTime: 2
   ratioScale: 1.10000002
 --- !u!114 &2099989267
 MonoBehaviour:
@@ -6599,4 +6612,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 96c562767f6340b418bceaa4a6ca4a59, type: 3}
     color: {r: 0, g: 0, b: 0, a: 0}
   planetTag: Planet
+  planetWin: {fileID: 2800000, guid: 9cb6986c49d1c1442bd710b808656162, type: 3}
+  rocketWin: {fileID: 0}
+  waitEndTime: 2
   ratioScale: 1.10000002

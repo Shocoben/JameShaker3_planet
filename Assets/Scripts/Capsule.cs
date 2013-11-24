@@ -14,6 +14,8 @@ public class Capsule : MonoBehaviour {
 
 	
 	private Launcher launch;
+	
+	public static int count = 0;
 
 	public void resetGeneration()
 	{
@@ -26,6 +28,7 @@ public class Capsule : MonoBehaviour {
 	public int ID =0;
 	void Start()
 	{
+		count++;
 		launch = GetComponent<Launcher>();
 		ID = countInstance;
 		countInstance++;
@@ -119,6 +122,7 @@ public class Capsule : MonoBehaviour {
 		GameObject explosion = Instantiate(explosionFX, transform.position, transform.rotation) as GameObject;
 		explosion.transform.parent = attachedPlanet.transform;
 		GameObject.Destroy(this.gameObject);
+		count--;
 	}
 	
 	public void setAttachedPlanet(Planet planet)
