@@ -37,10 +37,14 @@ public class Planet : MonoBehaviour {
 	public GameObject pLetterPrefab;
 	public GameObject pPercentPrefab;
 	
+	public Atmosphere atmosphere;
+	
 	public float sizeFactor = 0.2f;
 	public bool showLetter = false;
 	void Start()
 	{
+		atmosphere = GetComponentInChildren<Atmosphere>();
+		
 		minSize = transform.localScale.x;
 		id = instanceCount;
 		instanceCount ++;
@@ -104,6 +108,9 @@ public class Planet : MonoBehaviour {
 	
 	void Update()
 	{
+		if (atmosphere) {
+			atmosphere.SetAngry(canDestroyRocket());
+		}
 		
 		if (Input.GetMouseButtonDown(0))
 		{
