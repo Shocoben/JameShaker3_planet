@@ -1,18 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Sun : MonoBehaviour {
+public class Sun : Planet {
+	
+	public string SUNCLASS = "---------------------------------------";
+	public float rate = 1;
+	private float _lastDestroy = 0;
+	public int peopleToDestroyPerRate = 1;
 	
 	
-	private static Sun s_Instance = null;
-	public static Sun Instance()
+	
+	public override void Update ()
 	{
-		return s_Instance;
+		base.Update ();
+		if (_lastDestroy + rate < Time.time)
+		{
+			addPeople(-peopleToDestroyPerRate);
+			_lastDestroy = Time.time;
+		}
 	}
 	
-	// Use this for initialization
-	void Awake () {
-		s_Instance = this;
-	}
+	
 	
 }
