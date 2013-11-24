@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class TouchConfig
 {
 	public KeyCode keycode;
+	public KeyCode padCode;
 	public Texture texture;
 	public Color color;
 }
@@ -85,6 +86,7 @@ public class PlanetManagers : MonoBehaviour {
 			
 			
 			rocket.GetComponent<Launcher>().setLetter(keyName, cKeyCode);
+			rocket.GetComponent<Launcher>().setPadCode(rocketTouches[i].padCode);
 			rocket.GetComponent<Launcher>().setTexture(rocketTouches[i].texture);
 		}
 

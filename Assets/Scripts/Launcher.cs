@@ -44,6 +44,13 @@ public class Launcher : MonoBehaviour {
 		_letter = keycode;
 	}
 	
+	private KeyCode padCode;
+	public void setPadCode(KeyCode keycode)
+	{
+		padCode = keycode;
+		
+	}
+	
 	public void setColor(Color color)
 	{
 		fbx.renderer.material.SetColor("_Color", color);
@@ -59,13 +66,13 @@ public class Launcher : MonoBehaviour {
 	{
 		if (!_engine.enabled || controlsWhenFree)
 		{
-			if (Input.GetKeyUp(_letter)) 
+			if (Input.GetKeyUp(_letter) || Input.GetKeyUp(padCode)) 
 			{
 				activeEngine(_strenght);
 				
 				
 			} 
-			else if (Input.GetKeyDown(_letter))
+			else if (Input.GetKeyDown(_letter) || Input.GetKeyDown(padCode))
 			{
 				_lineRender.enabled = true;
 				_lineRender.SetPosition(0,transform.position);
@@ -73,7 +80,7 @@ public class Launcher : MonoBehaviour {
 				_strenghtOrigine = Input.mousePosition.y;
 				_timeOrigine = Time.time;
 			}
-			else if (Input.GetKey(_letter))
+			else if (Input.GetKey(_letter) || Input.GetKey(padCode))
 			{
 				if (timed) 
 				{

@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStrength: 5
-  maxTime: 2
+  maxTime: 1
   timed: 1
   letterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   controlsWhenFree: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2228b6503f042b4296d5bd3d1e58faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 2
+  rate: .5
   lastGeneration: 0
   peoplePerGeneration: 1
   explosionFX: {fileID: 100008, guid: 8a7424826f320f34a92d6558daa2188f, type: 2}
@@ -244,6 +244,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53e8e103f0eefb349917fe59ed7e98a7, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   m_EditorClassIdentifier: 
 --- !u!120 &12000000
 LineRenderer:

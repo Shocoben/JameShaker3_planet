@@ -97,10 +97,9 @@ public class Planet : MonoBehaviour {
 	}
 	
 	
-	private int peopleToDestroyRocket = 1;
 	public bool canDestroyRocket()
 	{
-		return _people >= peopleToDestroyRocket;
+		return _people >= minimPeopleToExplodeRocket;
 	}
 	
 	

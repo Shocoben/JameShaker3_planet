@@ -164,7 +164,7 @@ MonoBehaviour:
   maxPeople: 10
   maxRadius: 1.5
   peopleSelectSpeed: 33
-  minimPeopleToExplodeRocket: 1
+  minimPeopleToExplodeRocket: 45
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   sizeFactor: .0500000007
