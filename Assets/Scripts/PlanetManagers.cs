@@ -101,6 +101,10 @@ public class PlanetManagers : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (_finished) {
+			if (Input.GetMouseButtonDown(0) || Input.anyKeyDown)
+			{
+				Application.LoadLevel("Main");
+			}
 			return;
 		}
 		
