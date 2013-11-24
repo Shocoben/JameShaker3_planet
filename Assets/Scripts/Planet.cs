@@ -80,8 +80,7 @@ public class Planet : MonoBehaviour {
 	
 	public float UpdateDistanceEffect()
 	{
-		distanceEffect = transform.localScale.x * distanceEffect / minSize;
-		return distanceEffect;
+		return transform.localScale.x * distanceEffect / minSize;
 	}
 	
 	public float rayDistance = 100;
@@ -123,8 +122,6 @@ public class Planet : MonoBehaviour {
 		}
 		else if ( Input.GetMouseButton(0) )
 		{
-			
-			
 			if (mouseTouchMe() && selected != null)
 				Debug.Log(selected.id + " id " + id);
 			
@@ -137,7 +134,6 @@ public class Planet : MonoBehaviour {
 		{
 			selected.onDeselect();
 			selected = null;
-			
 		}
 		/*
 		if (Input.GetKeyDown(letter))
