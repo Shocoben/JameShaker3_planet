@@ -43,6 +43,8 @@ public class Planet : MonoBehaviour {
 	public bool showLetter = false;
 	
 	public static int count = 0;
+	
+	public GameObject graphicFBX;
 	void Start()
 	{
 		count++;
@@ -121,7 +123,10 @@ public class Planet : MonoBehaviour {
 			if (mouseTouchMe())
 			{
 				if (selected == null)
+				{
 					selected = this;
+					onSelect();
+				}
 			}
 		}
 		else if ( Input.GetMouseButton(0) )
@@ -136,6 +141,8 @@ public class Planet : MonoBehaviour {
 			selected.onDeselect();
 			selected = null;
 		}
+		
+		
 		/*
 		if (Input.GetKeyDown(letter))
 		{
@@ -198,11 +205,25 @@ public class Planet : MonoBehaviour {
 		*/
 	}
 	
+	
+	
 	public void onDeselect()
 	{
 		if (percentText)
 			percentText.gameObject.SetActive(false);
 		_percentPeople = 0;
+		
+		graphicFBX.renderer.material.SetColor("_OutlineColor", unselectColor);
+		graphicFBX.renderer.material.SetFloat("_Outline", 0);
+	}
+	
+	public Color selectColor = Color.white;
+	public Color unselectColor = Color.black;
+	public float outlineWidth = 5;
+	public void onSelect()
+	{
+		graphicFBX.renderer.material.SetColor("_OutlineColor", selectColor);
+		graphicFBX.renderer.material.SetFloat("_Outline", outlineWidth);
 	}
 	
 	public int nbrPeopleSentPerRate;

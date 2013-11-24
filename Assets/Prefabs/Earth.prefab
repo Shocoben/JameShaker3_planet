@@ -157,14 +157,20 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  graphicFBX: {fileID: 100002}
   rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
+  selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
+  unselectColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: .0500000007
   nbrPeopleSentPerRate: 2
   sendRate: .100000001
-  ratio: .25
   attachedRockets: []
+  planetMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
