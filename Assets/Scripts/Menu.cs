@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Menu : MonoBehaviour 
 {
@@ -9,6 +10,22 @@ public class Menu : MonoBehaviour
 	void Awake () {
 		Time.timeScale = 0;
 	
+	}
+	
+	void Start() {
+		GUITexture gtext = GetComponent<GUITexture>();
+		gtext.pixelInset = new Rect(
+			-(gtext.pixelInset.width*Screen.width/1600)*0.5f,
+			(gtext.pixelInset.height*Screen.height/1200),
+			gtext.pixelInset.width*Screen.width/1600,
+			gtext.pixelInset.height*Screen.height/1200);
+		
+		gtext = helpButton.GetComponent<GUITexture>();
+		gtext.pixelInset = new Rect(
+			-(gtext.pixelInset.width*Screen.width/1600)*0.5f,
+			0,
+			gtext.pixelInset.width*Screen.width/1600,
+			gtext.pixelInset.height*Screen.height/1200);
 	}
 	
 	// Update is called once per frame
