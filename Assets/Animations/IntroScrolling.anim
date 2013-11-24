@@ -33,13 +33,13 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: .699999988
-        inSlope: -.0444360897
-        outSlope: -.0444360897
+        inSlope: -.0247535985
+        outSlope: -.0247535985
         tangentMode: 10
-      - time: 50.0333328
+      - time: 89.8166656
         value: -1.52328563
-        inSlope: -.0444360897
-        outSlope: -.0444360897
+        inSlope: -.0247535985
+        outSlope: -.0247535985
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -87,13 +87,13 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: .699999988
-        inSlope: -.0444360897
-        outSlope: -.0444360897
+        inSlope: -.0247535985
+        outSlope: -.0247535985
         tangentMode: 10
-      - time: 50.0333328
+      - time: 89.8166656
         value: -1.52328563
-        inSlope: -.0444360897
-        outSlope: -.0444360897
+        inSlope: -.0247535985
+        outSlope: -.0247535985
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -103,7 +103,7 @@ AnimationClip:
     script: {fileID: 0}
   m_EulerEditorCurves: []
   m_Events:
-  - time: 35.1166649
+  - time: 65.0500031
     functionName: LaunchGame
     data: 
     objectReferenceParameter: {fileID: 0}
