@@ -122,6 +122,9 @@ public class Capsule : MonoBehaviour {
 		GameObject explosion = Instantiate(explosionFX, transform.position, transform.rotation) as GameObject;
 		explosion.transform.parent = attachedPlanet.transform;
 		GameObject.Destroy(this.gameObject);
+		if (Camera.main.GetComponent<ShakePosition>()!=null) {
+			Camera.main.GetComponent<ShakePosition>().Shake(0.5f);
+		}
 		count--;
 	}
 	
