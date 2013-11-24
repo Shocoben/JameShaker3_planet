@@ -273,6 +273,9 @@ public class Planet : MonoBehaviour {
 		}
 		attachedRockets.Clear();
 		Instantiate(explosionFX, transform.position, Quaternion.Euler(Vector3.right * 90) );
+		if (Camera.main.GetComponent<ShakePosition>()!=null) {
+			Camera.main.GetComponent<ShakePosition>().Shake();
+		}
 		GameObject.Destroy(this.gameObject);
 	}
 	

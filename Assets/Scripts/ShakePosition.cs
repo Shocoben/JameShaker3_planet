@@ -8,7 +8,7 @@ public class ShakePosition : MonoBehaviour {
 	public float shakeTime = 1;
 	
 	// Use this for initialization
-	void Shake () {
+	public void Shake () {
 	    Hashtable ht = new Hashtable();
 	    ht.Add("x",shakeX);
 	    ht.Add("y",shakeY);
