@@ -9,6 +9,8 @@ public class Capsule : MonoBehaviour {
 	private Planet attachedPlanet = null;
 	public int peoplePerGeneration = 1;
 	
+	public GameObject explosionFX;
+	
 
 	
 	private Launcher launch;
@@ -70,8 +72,7 @@ public class Capsule : MonoBehaviour {
 	public void startDestroy()
 	{
 		_isDestroying = true;
-		_startDestroyTime = Time.time;
-		
+		_startDestroyTime = Time.time;		
 	}
 	
 	public void stopDestroy()
@@ -81,6 +82,8 @@ public class Capsule : MonoBehaviour {
 	
 	public void destroy()
 	{
+		GameObject explosion = Instantiate(explosionFX, transform.position, transform.rotation) as GameObject;
+		explosion.transform.parent = attachedPlanet.transform;
 		GameObject.Destroy(this.gameObject);
 	}
 	

@@ -5,6 +5,7 @@ public class Engine : MonoBehaviour {
 	
 	public float speed = 0.1f;
 	public string planetTag;
+	public GameObject trailFX;
 	
 	// Use this for initialization
 	void Start () {
@@ -29,6 +30,16 @@ public class Engine : MonoBehaviour {
 			}
 		}
 		transform.Translate(Vector3.forward * speed * Time.deltaTime);
+	}
+	
+	void OnEnable()	
+	{
+		trailFX.SetActive(true);
+	}
+	void OnDisable()	
+	{
+		trailFX.GetComponent<ParticleSystem>().Clear();
+		trailFX.SetActive(false);
 	}
 	
 	private Planet[] _planets;

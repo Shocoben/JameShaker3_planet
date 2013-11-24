@@ -157,10 +157,11 @@ MonoBehaviour:
   distanceEffect: .5
   baseMassFactor: 10
   letter: 0
+  explosionFX: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
   id: 0
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
-  maxPeople: 50
+  maxPeople: 10
   maxRadius: 1.5
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 1
