@@ -187,7 +187,6 @@ MonoBehaviour:
     m_Bits: 256
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
-  ratio: .25
   attachedRockets: []
 --- !u!114 &68897036
 MonoBehaviour:
@@ -765,7 +764,6 @@ MonoBehaviour:
     m_Bits: 256
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
-  ratio: .25
   attachedRockets: []
 --- !u!114 &187401195
 MonoBehaviour:
@@ -3212,7 +3210,6 @@ MonoBehaviour:
     m_Bits: 256
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
-  ratio: .25
   attachedRockets: []
 --- !u!114 &763270709
 MonoBehaviour:
@@ -3568,7 +3565,6 @@ MonoBehaviour:
     m_Bits: 256
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
-  ratio: .25
   attachedRockets: []
 --- !u!114 &926972954
 MonoBehaviour:
@@ -4063,7 +4059,6 @@ MonoBehaviour:
     m_Bits: 256
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
-  ratio: .25
   attachedRockets: []
 --- !u!114 &1257977283
 MonoBehaviour:
@@ -4220,7 +4215,6 @@ MonoBehaviour:
     m_Bits: 256
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
-  ratio: .25
   attachedRockets: []
 --- !u!114 &1367613259
 MonoBehaviour:
@@ -4541,7 +4535,6 @@ MonoBehaviour:
     m_Bits: 256
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
-  ratio: .25
   attachedRockets: []
 --- !u!114 &1498185814
 MonoBehaviour:
@@ -5215,7 +5208,6 @@ MonoBehaviour:
     m_Bits: 256
   nbrPeopleSentPerRate: 0
   sendRate: 1
-  ratio: 0
   attachedRockets: []
   SUNCLASS: '---------------------------------------'
   rate: 1
@@ -5540,7 +5532,6 @@ MonoBehaviour:
     m_Bits: 256
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
-  ratio: .25
   attachedRockets: []
 --- !u!114 &1872903285
 MonoBehaviour:
@@ -6408,7 +6399,6 @@ MonoBehaviour:
     m_Bits: 256
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
-  ratio: .25
   attachedRockets: []
 --- !u!114 &2049225629
 MonoBehaviour:
