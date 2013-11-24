@@ -41,6 +41,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: 
   rotateEverySecond: 1
 --- !u!198 &19800000
 ParticleSystem:

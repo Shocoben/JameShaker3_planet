@@ -4,6 +4,7 @@ using System.Collections;
 public class Launcher : MonoBehaviour {
 	
 	public float maxStrength = 5f;
+	public float minStrength = 0.5f;
 	public float maxTime = 2f;
 	public bool timed = true;
 	
@@ -91,7 +92,7 @@ public class Launcher : MonoBehaviour {
 				if (timed) 
 				{
 					float t = Mathf.Clamp(Time.time-_timeOrigine,0,maxTime);
-					_strenght = (t/maxTime)*maxStrength;
+					_strenght = minStrength+(t/maxTime)*maxStrength;
 				} 
 				else 
 				{
