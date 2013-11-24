@@ -28,11 +28,13 @@ public class People : MonoBehaviour {
 		transform.Translate(Vector3.forward * _speed * Time.deltaTime);
 	}
 	
+	public string sunTag = "Sun";
 	public void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == planetTag)
+		if (other.tag == planetTag || other.tag == sunTag)
 		{
 			Planet o = other.GetComponent<Planet>();
+			Debug.Log(o.id);
 			if (o != null && o.id == _target.id)
 			{
 				o.addPeople(1);

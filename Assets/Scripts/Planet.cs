@@ -85,7 +85,7 @@ public class Planet : MonoBehaviour {
 	
 	public float rayDistance = 100;
 	public LayerMask rayMask;
-	bool mouseTouchMe()
+	protected bool mouseTouchMe()
 	{
 		RaycastHit hit;
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
