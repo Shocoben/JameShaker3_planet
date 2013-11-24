@@ -106,6 +106,8 @@ public class Planet : MonoBehaviour {
 	}
 	
 	
+	
+	
 	void Update()
 	{
 		if (atmosphere) {

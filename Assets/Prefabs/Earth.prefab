@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: .5
+  distanceEffect: 2
   baseMassFactor: 10
   letter: 0
   explosionFX: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
@@ -167,6 +167,7 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 45
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
   rayDistance: 100

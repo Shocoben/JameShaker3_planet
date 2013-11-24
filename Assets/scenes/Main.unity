@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: .5
+  distanceEffect: 2
   baseMassFactor: 10
   letter: 117
   explosionFX: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
@@ -129,7 +129,7 @@ MonoBehaviour:
   maxPeople: 50
   maxRadius: 1.5
   peopleSelectSpeed: 33
-  minimPeopleToExplodeRocket: 1
+  minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   atmosphere: {fileID: 0}
@@ -356,7 +356,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -452,7 +452,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: .5
+  distanceEffect: 2
   baseMassFactor: 10
   letter: 114
   explosionFX: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
@@ -554,7 +554,7 @@ MonoBehaviour:
   maxPeople: 50
   maxRadius: 1.5
   peopleSelectSpeed: 33
-  minimPeopleToExplodeRocket: 1
+  minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   atmosphere: {fileID: 0}
@@ -946,7 +946,7 @@ BoxCollider:
   m_GameObject: {fileID: 427768538}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 6.1232336e-17}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1148,7 +1148,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -2433,7 +2433,7 @@ BoxCollider:
   m_GameObject: {fileID: 627008826}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 6.1232336e-17}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2531,7 +2531,7 @@ BoxCollider:
   m_GameObject: {fileID: 672822882}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 6.1232336e-17}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2647,7 +2647,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -2739,7 +2739,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -2784,7 +2784,7 @@ BoxCollider:
   m_GameObject: {fileID: 757674290}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 6.1232336e-17}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2860,7 +2860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: .5
+  distanceEffect: 2
   baseMassFactor: 10
   letter: 97
   explosionFX: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
@@ -2870,7 +2870,7 @@ MonoBehaviour:
   maxPeople: 50
   maxRadius: 1.5
   peopleSelectSpeed: 33
-  minimPeopleToExplodeRocket: 1
+  minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   atmosphere: {fileID: 0}
@@ -3152,7 +3152,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -3204,7 +3204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: .5
+  distanceEffect: 2
   baseMassFactor: 10
   letter: 116
   explosionFX: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
@@ -3214,7 +3214,7 @@ MonoBehaviour:
   maxPeople: 50
   maxRadius: 1.5
   peopleSelectSpeed: 33
-  minimPeopleToExplodeRocket: 1
+  minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   atmosphere: {fileID: 0}
@@ -3532,7 +3532,7 @@ BoxCollider:
   m_GameObject: {fileID: 1160273164}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 6.1232336e-17}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3659,7 +3659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: .5
+  distanceEffect: 2
   baseMassFactor: 10
   letter: 122
   explosionFX: {fileID: 100008, guid: 8a7424826f320f34a92d6558daa2188f, type: 2}
@@ -3669,7 +3669,7 @@ MonoBehaviour:
   maxPeople: 50
   maxRadius: 1.5
   peopleSelectSpeed: 33
-  minimPeopleToExplodeRocket: 1
+  minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   atmosphere: {fileID: 0}
@@ -3816,7 +3816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: .5
+  distanceEffect: 2
   baseMassFactor: 10
   letter: 105
   explosionFX: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
@@ -3826,7 +3826,7 @@ MonoBehaviour:
   maxPeople: 50
   maxRadius: 1.5
   peopleSelectSpeed: 33
-  minimPeopleToExplodeRocket: 1
+  minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   atmosphere: {fileID: 0}
@@ -4042,7 +4042,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -4094,7 +4094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: .5
+  distanceEffect: 2
   baseMassFactor: 10
   letter: 101
   explosionFX: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
@@ -4104,7 +4104,7 @@ MonoBehaviour:
   maxPeople: 50
   maxRadius: 1.5
   peopleSelectSpeed: 33
-  minimPeopleToExplodeRocket: 1
+  minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   atmosphere: {fileID: 0}
@@ -4371,7 +4371,7 @@ BoxCollider:
   m_GameObject: {fileID: 1595368476}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 6.1232336e-17}
   m_Center: {x: 0, y: 0, z: 0}
@@ -4835,7 +4835,7 @@ BoxCollider:
   m_GameObject: {fileID: 1812085970}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 6.1232336e-17}
   m_Center: {x: 0, y: 0, z: 0}
@@ -4960,7 +4960,7 @@ BoxCollider:
   m_GameObject: {fileID: 1844539944}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 6.1232336e-17}
   m_Center: {x: 0, y: 0, z: 0}
@@ -5023,7 +5023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: .5
+  distanceEffect: 2
   baseMassFactor: 10
   letter: 121
   explosionFX: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
@@ -5033,7 +5033,7 @@ MonoBehaviour:
   maxPeople: 50
   maxRadius: 1.5
   peopleSelectSpeed: 33
-  minimPeopleToExplodeRocket: 1
+  minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   atmosphere: {fileID: 0}
@@ -5191,7 +5191,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1877151214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .100000001, z: 0}
+  m_LocalPosition: {x: .5, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5333,7 +5333,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -5411,7 +5411,7 @@ GUITexture:
   m_PixelInset:
     serializedVersion: 2
     x: -128
-    y: 0
+    y: 128
     width: 256
     height: 128
   m_LeftBorder: 0
@@ -5425,7 +5425,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1948406864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .300000012, z: 0}
+  m_LocalPosition: {x: .5, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5530,7 +5530,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: minimPeopleToExplodeRocket
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -5794,7 +5794,7 @@ BoxCollider:
   m_GameObject: {fileID: 2046917275}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 6.1232336e-17}
   m_Center: {x: 0, y: 0, z: 0}
@@ -5881,7 +5881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7180c9c9d987e42bf092aced9c2c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceEffect: .5
+  distanceEffect: 2
   baseMassFactor: 10
   letter: 111
   explosionFX: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
@@ -5891,7 +5891,7 @@ MonoBehaviour:
   maxPeople: 50
   maxRadius: 1.5
   peopleSelectSpeed: 33
-  minimPeopleToExplodeRocket: 1
+  minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
   atmosphere: {fileID: 0}
