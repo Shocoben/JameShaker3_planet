@@ -2520,7 +2520,7 @@ GameObject:
   - 23: {fileID: 781506325}
   m_Layer: 0
   m_Name: Sun
-  m_TagString: Planet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2902,6 +2902,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300000, guid: 9a01cae36d098244291a835295e2d4ec, type: 3}
+    - target: {fileID: 100000, guid: e3912718a3859c44d8a5056474c7cb7d, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 13500000, guid: e3912718a3859c44d8a5056474c7cb7d, type: 2}
     - {fileID: 11400000, guid: e3912718a3859c44d8a5056474c7cb7d, type: 2}
@@ -3831,7 +3835,7 @@ GameObject:
   - 114: {fileID: 1763861836}
   m_Layer: 0
   m_Name: Sun
-  m_TagString: Untagged
+  m_TagString: Sun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
