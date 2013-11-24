@@ -12,6 +12,8 @@ public class Planet : MonoBehaviour {
 	private TextMesh percentText;
 	public KeyCode letter;
 	
+	public GameObject explosionFX;
+	
 	
 	public static Planet selected = null;
 	public static int instanceCount = 0;
@@ -263,6 +265,7 @@ public class Planet : MonoBehaviour {
 			
 		}
 		attachedRockets.Clear();
+		Instantiate(explosionFX, transform.position, Quaternion.Euler(Vector3.right * 90) );
 		GameObject.Destroy(this.gameObject);
 	}
 	

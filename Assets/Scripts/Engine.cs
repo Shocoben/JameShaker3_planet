@@ -5,6 +5,8 @@ public class Engine : MonoBehaviour {
 	
 	public float speed = 0.1f;
 	public string planetTag;
+	public string sunTag;
+	public GameObject trailFX;
 	
 	// Use this for initialization
 	void Start () {
@@ -13,6 +15,13 @@ public class Engine : MonoBehaviour {
 		int i = 0;
 		foreach (GameObject p in planetGOs) {
 			_planets[i++] = p.GetComponent<Planet>();
+		}
+		
+		GameObject[] sunGOs = GameObject.FindGameObjectsWithTag(sunTag);
+		_suns = new Planet[sunGOs.Length];
+		i = 0;
+		foreach (GameObject p in sunGOs) {
+			_suns[i++] = p.GetComponent<Planet>();
 		}
 	}
 	
@@ -29,7 +38,29 @@ public class Engine : MonoBehaviour {
 			}
 		}
 		transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
+		foreach (Planet p in _suns) {
+			if (p == null)
+				continue;
+			float d = Vector3.Distance(transform.position,p.gameObject.transform.position);
+			if (d<p.UpdateDistanceEffect()) {
+	 	 		Vector3 relativePos = transform.position - p.gameObject.transform.position;
+        		Quaternion rotation = Quaternion.LookRotation(relativePos);
+        		transform.rotation = Quaternion.Lerp(transform.rotation,rotation,Time.deltaTime*0.5f);				
+			}
+		}
+	}
+	
+	void OnEnable()	
+	{
+		trailFX.SetActive(true);
+	}
+	void OnDisable()	
+	{
+		trailFX.GetComponent<ParticleSystem>().Clear();
+		trailFX.SetActive(false);
 	}
 	
 	private Planet[] _planets;
+	private Planet[] _suns;
 }
