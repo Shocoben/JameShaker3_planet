@@ -189,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: .5
   planetTag: Planet
+  sunTag: Sun
   trailFX: {fileID: 100004}
 --- !u!114 &11400004
 MonoBehaviour:
