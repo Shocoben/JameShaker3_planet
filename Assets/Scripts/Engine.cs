@@ -50,6 +50,8 @@ public class Engine : MonoBehaviour {
         		transform.rotation = Quaternion.Lerp(transform.rotation,rotation,Time.deltaTime*0.5f);				
 			}
 		}
+		
+		transform.position = new Vector3(transform.position.x,0,transform.position.z);
 	}
 	
 	void OnEnable()	
