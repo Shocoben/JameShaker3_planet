@@ -141,6 +141,7 @@ MonoBehaviour:
   minSpeed: 2
   maxSpeed: 5
   planetTag: Planet
+  sunTag: Sun
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

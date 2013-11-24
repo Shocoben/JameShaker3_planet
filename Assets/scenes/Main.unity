@@ -188,6 +188,9 @@ MonoBehaviour:
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
+  planetMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &68897036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -765,6 +768,9 @@ MonoBehaviour:
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
+  planetMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &187401195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3211,6 +3217,9 @@ MonoBehaviour:
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
+  planetMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &763270709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3566,6 +3575,9 @@ MonoBehaviour:
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
+  planetMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &926972954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4060,6 +4072,9 @@ MonoBehaviour:
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
+  planetMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1257977283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4216,6 +4231,9 @@ MonoBehaviour:
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
+  planetMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1367613259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4536,6 +4554,9 @@ MonoBehaviour:
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
+  planetMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1498185814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5209,6 +5230,9 @@ MonoBehaviour:
   nbrPeopleSentPerRate: 0
   sendRate: 1
   attachedRockets: []
+  planetMask:
+    serializedVersion: 2
+    m_Bits: 0
   SUNCLASS: '---------------------------------------'
   rate: 1
   peopleToDestroyPerRate: 1
@@ -5533,6 +5557,9 @@ MonoBehaviour:
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
+  planetMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1872903285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6400,6 +6427,9 @@ MonoBehaviour:
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
+  planetMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &2049225629
 MonoBehaviour:
   m_ObjectHideFlags: 0
