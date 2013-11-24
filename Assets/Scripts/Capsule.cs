@@ -19,6 +19,7 @@ public class Capsule : MonoBehaviour {
 		
 	}
 	
+	private Animation _anim;
 	private static int countInstance = 0;
 	public int ID =0;
 	void Start()
@@ -26,6 +27,7 @@ public class Capsule : MonoBehaviour {
 		launch = GetComponent<Launcher>();
 		ID = countInstance;
 		countInstance++;
+		_anim = GetComponent<Animation>();
 	}
 	
 	public float rayDistance = 100;
@@ -50,12 +52,14 @@ public class Capsule : MonoBehaviour {
 	public float delayDestroy = 1;
 	
 	void Update ()
-	{	
-		if ( attachedPlanet != null && lastGeneration + rate < Time.time )
+	{
+		
+		/*if ( attachedPlanet != null && lastGeneration + rate < Time.time )
 		{
 			attachedPlanet.addPeople(peoplePerGeneration);
 			resetGeneration();
-		}
+		}*/
+		
 		if (!_isDestroying && attachedPlanet != null && attachedPlanet.canDestroyRocket() && Input.GetMouseButtonUp(0) && mouseTouchMe() )
 		{
 			startDestroy();
@@ -67,10 +71,21 @@ public class Capsule : MonoBehaviour {
 		}
 	}
 	
+	public void onPeopleLand()
+	{
+		if (attachedPlanet == null)
+			return;
+		
+		attachedPlanet.addPeople(peoplePerGeneration);
+	}
+	
+	
+	
 	public void startDestroy()
 	{
 		_isDestroying = true;
 		_startDestroyTime = Time.time;
+		_anim.Play("scaling");
 		
 	}
 	
@@ -86,8 +101,14 @@ public class Capsule : MonoBehaviour {
 	
 	public void setAttachedPlanet(Planet planet)
 	{
+		
 		attachedPlanet = planet;
 		attachedPlanet.attachRocket(this);
+		if (planet != null && _anim != null)
+		{
+			people.SetActive(true);
+			_anim.Play("jumpingPeople");
+		}
 	}
 	
 	public float urgenceLaunchStrength = 2;
@@ -98,12 +119,21 @@ public class Capsule : MonoBehaviour {
 			attachedPlanet.detachRocket(this);
 		}
 		attachedPlanet = null;
+		stopAnimation();
 		
 	}
 	
 	public void startUrgenceEngine()
 	{
 		launch.activeEngine(urgenceLaunchStrength);	
+	}
+	
+	public GameObject people;
+	
+	public void stopAnimation()
+	{
+		_anim.Stop();
+		people.SetActive(false);
 	}
 	
 
