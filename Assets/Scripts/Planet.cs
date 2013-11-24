@@ -280,7 +280,6 @@ public class Planet : MonoBehaviour {
 		return baseMassFactor * (1 + _people);
 	}
 	
-	public float ratio;
 	public List<Capsule> attachedRockets = new List<Capsule>();
 	
 	void OnTriggerEnter(Collider other)
@@ -304,7 +303,7 @@ public class Planet : MonoBehaviour {
 				other.gameObject.transform.rotation = Quaternion.LookRotation(hit.normal);
 				Vector3 dir = (other.gameObject.transform.position-transform.position);
 				dir.Normalize();
-				other.gameObject.transform.position = transform.position + (dir * transform.localScale.x * .5f) + (dir * other.gameObject.transform.localScale.x*ratio);
+				other.gameObject.transform.position = transform.position + (dir * transform.localScale.x * .5f) + (dir * other.gameObject.transform.localScale.x*0.25f);
 			}
 			other.gameObject.transform.parent = transform;
 			

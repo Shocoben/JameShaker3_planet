@@ -64,6 +64,12 @@ public class Launcher : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if (!_engine.enabled) {
+			Vector3 dir = (transform.position-transform.parent.transform.position);
+			dir.Normalize();
+			transform.position = transform.parent.transform.position + (dir * transform.parent.transform.localScale.x * .5f) + (dir * transform.localScale.x*0.25f);
+		}
+		
 		if (!_engine.enabled || controlsWhenFree)
 		{
 			if (Input.GetKeyUp(_letter) || Input.GetKeyUp(padCode)) 
