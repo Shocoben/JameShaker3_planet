@@ -285,6 +285,10 @@ public class Planet : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other)
 	{
+		if (tag=="Sun") {
+			return;
+		}
+		
 		if (other.gameObject.GetComponent<Engine>()!=null &&
 			other.gameObject.GetComponent<Engine>().enabled) {
 			other.gameObject.GetComponent<Engine>().enabled = false;
