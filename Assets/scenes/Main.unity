@@ -173,7 +173,7 @@ MonoBehaviour:
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
   maxPeople: 50
-  maxRadius: 1.5
+  maxRadius: 1.79999995
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
@@ -408,6 +408,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f81028b8ffbaeaf4ba6b10c5dc5b3723, type: 2}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: maxRadius
+      value: 1.79999995
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 2049225626}
@@ -511,6 +515,10 @@ Prefab:
     - target: {fileID: 400002, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: maxRadius
+      value: 1.79999995
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -633,8 +641,8 @@ Transform:
   m_LocalPosition: {x: 3.5, y: 0, z: 0}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
-  - {fileID: 1102520069}
   - {fileID: 1991872641}
+  - {fileID: 1102520069}
   m_Father: {fileID: 632758744}
 --- !u!114 &187401194
 MonoBehaviour:
@@ -656,7 +664,7 @@ MonoBehaviour:
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
   maxPeople: 50
-  maxRadius: 1.5
+  maxRadius: 1.79999995
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
@@ -953,7 +961,7 @@ Transform:
   m_GameObject: {fileID: 321837884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25.2983398, y: 25.2983398, z: 25.2983398}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 1367613257}
 --- !u!1 &380255519
@@ -981,7 +989,7 @@ Transform:
   m_GameObject: {fileID: 380255519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25.2983398, y: 25.2983398, z: 25.2983398}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 68897034}
 --- !u!1 &427768538
@@ -1010,7 +1018,7 @@ Transform:
   m_GameObject: {fileID: 427768538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.79999995, y: 3.79999995, z: 3.79999995}
+  m_LocalScale: {x: 2.79999995, y: 2.79999995, z: 2.79999995}
   m_Children: []
   m_Father: {fileID: 271639880}
 --- !u!65 &427768540
@@ -1078,7 +1086,7 @@ Transform:
   m_GameObject: {fileID: 491709357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25.2983398, y: 25.2983398, z: 25.2983398}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 1498185812}
 --- !u!1001 &496899665
@@ -1212,6 +1220,10 @@ Prefab:
       propertyPath: minimPeopleToExplodeRocket
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: maxRadius
+      value: 1.79999995
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 1498185811}
@@ -1298,7 +1310,7 @@ Transform:
   m_GameObject: {fileID: 507077066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25.2983398, y: 25.2983398, z: 25.2983398}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 1257977281}
 --- !u!1001 &524248403
@@ -2469,7 +2481,7 @@ Transform:
   m_GameObject: {fileID: 627008826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.79999995, y: 3.79999995, z: 3.79999995}
+  m_LocalScale: {x: 2.79999995, y: 2.79999995, z: 2.79999995}
   m_Children: []
   m_Father: {fileID: 501085248}
 --- !u!65 &627008828
@@ -2567,7 +2579,7 @@ Transform:
   m_GameObject: {fileID: 672822882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.79999995, y: 3.79999995, z: 3.79999995}
+  m_LocalScale: {x: 2.79999995, y: 2.79999995, z: 2.79999995}
   m_Children: []
   m_Father: {fileID: 1594411542}
 --- !u!65 &672822884
@@ -2701,6 +2713,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 934767d23afaf7f40908bf05ed6b5192, type: 2}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: maxRadius
+      value: 1.79999995
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -2798,6 +2814,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5aeda2ac25c3be74fa6c498d3aa652e3, type: 2}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: maxRadius
+      value: 1.79999995
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 1872903283}
@@ -2829,7 +2849,7 @@ Transform:
   m_GameObject: {fileID: 757674290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.79999995, y: 3.79999995, z: 3.79999995}
+  m_LocalScale: {x: 2.79999995, y: 2.79999995, z: 2.79999995}
   m_Children: []
   m_Father: {fileID: 1828140127}
 --- !u!65 &757674292
@@ -2954,7 +2974,7 @@ MonoBehaviour:
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
   maxPeople: 50
-  maxRadius: 1.5
+  maxRadius: 1.79999995
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
@@ -3244,6 +3264,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8ea1ce5558515a547805eeb41b94d241, type: 2}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: maxRadius
+      value: 1.79999995
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 926972951}
@@ -3279,8 +3303,8 @@ Transform:
   m_LocalPosition: {x: 3.5, y: 0, z: 0}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
-  - {fileID: 1946200620}
   - {fileID: 195075778}
+  - {fileID: 1946200620}
   m_Father: {fileID: 632758744}
 --- !u!114 &926972953
 MonoBehaviour:
@@ -3302,7 +3326,7 @@ MonoBehaviour:
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
   maxPeople: 50
-  maxRadius: 1.5
+  maxRadius: 1.79999995
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
@@ -3536,7 +3560,7 @@ Transform:
   m_GameObject: {fileID: 1071231104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25.2983398, y: 25.2983398, z: 25.2983398}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 1872903290}
 --- !u!1 &1102520067
@@ -3564,7 +3588,7 @@ Transform:
   m_GameObject: {fileID: 1102520067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25.2983398, y: 25.2983398, z: 25.2983398}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 187401193}
 --- !u!1 &1160273164
@@ -3633,7 +3657,7 @@ Transform:
   m_GameObject: {fileID: 1160273164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.79999995, y: 3.79999995, z: 3.79999995}
+  m_LocalScale: {x: 2.79999995, y: 2.79999995, z: 2.79999995}
   m_Children: []
   m_Father: {fileID: 1991872641}
 --- !u!1001 &1163287822
@@ -3706,8 +3730,8 @@ Transform:
   m_LocalPosition: {x: 1.75, y: 0, z: 0}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
-  - {fileID: 507077067}
   - {fileID: 501085248}
+  - {fileID: 507077067}
   m_Father: {fileID: 930480903}
 --- !u!114 &1257977282
 MonoBehaviour:
@@ -3729,7 +3753,7 @@ MonoBehaviour:
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
   maxPeople: 50
-  maxRadius: 1.5
+  maxRadius: 1.79999995
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
@@ -3863,8 +3887,8 @@ Transform:
   m_LocalPosition: {x: 5.25, y: 0, z: 0}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
-  - {fileID: 321837885}
   - {fileID: 288701262}
+  - {fileID: 321837885}
   m_Father: {fileID: 1414295083}
 --- !u!114 &1367613258
 MonoBehaviour:
@@ -3886,7 +3910,7 @@ MonoBehaviour:
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
   maxPeople: 50
-  maxRadius: 1.5
+  maxRadius: 1.79999995
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
@@ -4016,8 +4040,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2049225627}
-  - {fileID: 68897034}
   - {fileID: 1367613257}
+  - {fileID: 68897034}
   m_Father: {fileID: 0}
 --- !u!1 &1479339923
 GameObject:
@@ -4140,6 +4164,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4bac8819e5451304aa044739d8c6a943, type: 2}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: maxRadius
+      value: 1.79999995
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -4199,7 +4227,7 @@ MonoBehaviour:
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
   maxPeople: 50
-  maxRadius: 1.5
+  maxRadius: 1.79999995
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
@@ -4328,7 +4356,7 @@ Transform:
   m_GameObject: {fileID: 1523279838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25.2983398, y: 25.2983398, z: 25.2983398}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 763270707}
 --- !u!1001 &1563298035
@@ -4493,7 +4521,7 @@ Transform:
   m_GameObject: {fileID: 1595368476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.79999995, y: 3.79999995, z: 3.79999995}
+  m_LocalScale: {x: 2.79999995, y: 2.79999995, z: 2.79999995}
   m_Children: []
   m_Father: {fileID: 288701262}
 --- !u!1001 &1595819605
@@ -4607,7 +4635,7 @@ Transform:
   m_GameObject: {fileID: 1685628710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25.2983398, y: 25.2983398, z: 25.2983398}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 2049225627}
 --- !u!1 &1710955196
@@ -4984,7 +5012,7 @@ Transform:
   m_GameObject: {fileID: 1812085970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.79999995, y: 3.79999995, z: 3.79999995}
+  m_LocalScale: {x: 2.79999995, y: 2.79999995, z: 2.79999995}
   m_Children: []
   m_Father: {fileID: 2000324660}
 --- !u!65 &1812085972
@@ -5109,7 +5137,7 @@ Transform:
   m_GameObject: {fileID: 1844539944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.79999995, y: 3.79999995, z: 3.79999995}
+  m_LocalScale: {x: 2.79999995, y: 2.79999995, z: 2.79999995}
   m_Children: []
   m_Father: {fileID: 195075778}
 --- !u!65 &1844539946
@@ -5192,7 +5220,7 @@ MonoBehaviour:
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
   maxPeople: 50
-  maxRadius: 1.5
+  maxRadius: 1.79999995
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
@@ -5290,8 +5318,8 @@ Transform:
   m_LocalPosition: {x: 3.5, y: 0, z: 0}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
-  - {fileID: 1071231105}
   - {fileID: 1594411542}
+  - {fileID: 1071231105}
   m_Father: {fileID: 632758744}
 --- !u!54 &1872903292
 Rigidbody:
@@ -5500,6 +5528,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0a15c5e8d20fabd4caad59af9d0d3b4f, type: 2}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: maxRadius
+      value: 1.79999995
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 187401192}
@@ -5530,7 +5562,7 @@ Transform:
   m_GameObject: {fileID: 1946200619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25.2983398, y: 25.2983398, z: 25.2983398}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 926972952}
 --- !u!1 &1948406864
@@ -5687,6 +5719,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2674896643f0e2046a45f4576bdd937f, type: 2}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: maxRadius
+      value: 1.79999995
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 1257977280}
@@ -5988,7 +6024,7 @@ Transform:
   m_GameObject: {fileID: 2046917275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.79999995, y: 3.79999995, z: 3.79999995}
+  m_LocalScale: {x: 2.79999995, y: 2.79999995, z: 2.79999995}
   m_Children: []
   m_Father: {fileID: 1980397079}
 --- !u!1 &2049225626
@@ -6044,7 +6080,7 @@ MonoBehaviour:
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
   maxPeople: 50
-  maxRadius: 1.5
+  maxRadius: 1.79999995
   peopleSelectSpeed: 33
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
