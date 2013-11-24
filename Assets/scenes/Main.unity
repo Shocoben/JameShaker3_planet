@@ -131,6 +131,7 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
   rayDistance: 100
@@ -474,6 +475,7 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
   rayDistance: 100
@@ -974,7 +976,7 @@ GameObject:
   - 198: {fileID: 543404515}
   - 199: {fileID: 543404514}
   m_Layer: 0
-  m_Name: Stars 03 PS
+  m_Name: Stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2410,6 +2412,7 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
   rayDistance: 100
@@ -2712,6 +2715,7 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
   rayDistance: 100
@@ -3052,6 +3056,7 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
   rayDistance: 100
@@ -3207,6 +3212,7 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
   rayDistance: 100
@@ -3483,6 +3489,7 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
   rayDistance: 100
@@ -3896,6 +3903,7 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 1
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .200000003
   showLetter: 0
   rayDistance: 100
@@ -4011,6 +4019,7 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
   rayDistance: 100
@@ -4496,7 +4505,7 @@ Light:
   serializedVersion: 3
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 30
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -4589,6 +4598,7 @@ MonoBehaviour:
   minimPeopleToExplodeRocket: 30
   pLetterPrefab: {fileID: 100000, guid: 2449e5291afbfa140b35c0b158923d65, type: 2}
   pPercentPrefab: {fileID: 100000, guid: 9e4bf591715ebdc4581c5ea37da73ae7, type: 2}
+  atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
   rayDistance: 100
