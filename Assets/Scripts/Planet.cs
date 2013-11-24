@@ -105,10 +105,7 @@ public class Planet : MonoBehaviour {
 		return _people >= minimPeopleToExplodeRocket;
 	}
 	
-	
-	
-	
-	void Update()
+	public virtual void Update()
 	{
 		if (atmosphere) {
 			atmosphere.SetAngry(canDestroyRocket());
