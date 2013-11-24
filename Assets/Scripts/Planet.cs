@@ -282,6 +282,7 @@ public class Planet : MonoBehaviour {
 	}
 	
 	public List<Capsule> attachedRockets = new List<Capsule>();
+	public LayerMask planetMask;
 	
 	void OnTriggerEnter(Collider other)
 	{
@@ -289,23 +290,18 @@ public class Planet : MonoBehaviour {
 			return;
 		}
 		
-		if (other.gameObject.GetComponent<Engine>()!=null &&
-			other.gameObject.GetComponent<Engine>().enabled) {
+		if (other.gameObject.GetComponent<Engine>()!=null && other.gameObject.GetComponent<Engine>().enabled == true) 
+		{
 			other.gameObject.GetComponent<Engine>().enabled = false;
 			other.gameObject.GetComponent<Capsule>().setAttachedPlanet(this);
 			
 			
 			RaycastHit hit = new RaycastHit();
-			if (Physics.Raycast(
-				other.gameObject.transform.position,
-				transform.position-other.gameObject.transform.position,
-				out hit)) 
-			{
-				other.gameObject.transform.rotation = Quaternion.LookRotation(hit.normal);
-				Vector3 dir = (other.gameObject.transform.position-transform.position);
-				dir.Normalize();
-				other.gameObject.transform.position = transform.position + (dir * transform.localScale.x * .5f) + (dir * other.gameObject.transform.localScale.x*0.25f);
-			}
+			Vector3 dir = transform.position-other.gameObject.transform.position;
+			dir.Normalize();
+			
+			other.gameObject.transform.rotation = Quaternion.LookRotation(-dir);
+			other.gameObject.transform.position = transform.position - (dir * transform.localScale.x * .5f) - (dir * other.gameObject.transform.localScale.x*0.25f);
 			other.gameObject.transform.parent = transform;
 			
 		}
