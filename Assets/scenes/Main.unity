@@ -181,10 +181,14 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  graphicFBX: {fileID: 380255519}
   rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
+  selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
+  unselectColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: .0500000007
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
@@ -761,10 +765,14 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  graphicFBX: {fileID: 1102520067}
   rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
+  selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
+  unselectColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: .0500000007
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
@@ -3082,7 +3090,7 @@ Transform:
   m_GameObject: {fileID: 758411575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .899999976, y: .899999976, z: .899999976}
   m_Children: []
   m_Father: {fileID: 648618954}
 --- !u!65 &758411577
@@ -3215,10 +3223,14 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  graphicFBX: {fileID: 1523279838}
   rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
+  selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
+  unselectColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: .0500000007
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
@@ -3573,10 +3585,14 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  graphicFBX: {fileID: 1946200619}
   rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
+  selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
+  unselectColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: .0500000007
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
@@ -3749,15 +3765,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6425c4ced1bc88343ae99d5027303882, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: .899999976
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6425c4ced1bc88343ae99d5027303882, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: .899999976
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6425c4ced1bc88343ae99d5027303882, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: .899999976
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6425c4ced1bc88343ae99d5027303882, type: 2}
@@ -4070,10 +4086,14 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  graphicFBX: {fileID: 507077066}
   rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
+  selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
+  unselectColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: .0500000007
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
@@ -4229,10 +4249,14 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  graphicFBX: {fileID: 321837884}
   rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
+  selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
+  unselectColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: .0500000007
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
@@ -4552,10 +4576,14 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  graphicFBX: {fileID: 491709357}
   rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
+  selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
+  unselectColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: .0500000007
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
@@ -5063,7 +5091,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 535295db00c1e2b49b691dd1b6f55c48, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .699999988
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5220,7 +5248,7 @@ MonoBehaviour:
   id: 0
   peopleStart: 1
   peoplePrefab: {fileID: 0}
-  maxPeople: 5
+  maxPeople: 20
   maxRadius: 1.5
   peopleSelectSpeed: 3
   minimPeopleToExplodeRocket: 99
@@ -5229,10 +5257,14 @@ MonoBehaviour:
   atmosphere: {fileID: 271639882}
   sizeFactor: .200000003
   showLetter: 0
+  graphicFBX: {fileID: 0}
   rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
+  selectColor: {r: 1, g: 1, b: 1, a: 1}
+  unselectColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 5
   nbrPeopleSentPerRate: 0
   sendRate: 1
   attachedRockets: []
@@ -5240,7 +5272,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   SUNCLASS: '---------------------------------------'
-  rate: 1
+  rate: .5
   peopleToDestroyPerRate: 1
 --- !u!135 &1763861836
 SphereCollider:
@@ -5557,10 +5589,14 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  graphicFBX: {fileID: 1071231104}
   rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
+  selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
+  unselectColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: .0500000007
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []
@@ -5678,6 +5714,7 @@ GameObject:
   - 4: {fileID: 1877151216}
   - 131: {fileID: 1877151215}
   - 114: {fileID: 1877151217}
+  - 82: {fileID: 1877151218}
   m_Layer: 0
   m_Name: Button_Help
   m_TagString: Untagged
@@ -5728,6 +5765,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   helpImage: {fileID: 1806678625}
   startButton: {fileID: 1948406864}
+--- !u!82 &1877151218
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1877151214}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: b5904051bedf4414db3d12e7836ff7f1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1894458927
 Prefab:
   m_ObjectHideFlags: 0
@@ -5910,6 +6005,7 @@ GameObject:
   - 4: {fileID: 1948406866}
   - 131: {fileID: 1948406865}
   - 114: {fileID: 1948406867}
+  - 82: {fileID: 1948406868}
   m_Layer: 0
   m_Name: Button_Start
   m_TagString: Untagged
@@ -5959,6 +6055,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   helpButton: {fileID: 1877151214}
+--- !u!82 &1948406868
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948406864}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: b5904051bedf4414db3d12e7836ff7f1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1961800592
 Prefab:
   m_ObjectHideFlags: 0
@@ -6430,10 +6584,14 @@ MonoBehaviour:
   atmosphere: {fileID: 0}
   sizeFactor: .0500000007
   showLetter: 0
+  graphicFBX: {fileID: 1685628710}
   rayDistance: 100
   rayMask:
     serializedVersion: 2
     m_Bits: 256
+  selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
+  unselectColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: .0500000007
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   attachedRockets: []

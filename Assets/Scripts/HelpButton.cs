@@ -14,6 +14,7 @@ public class HelpButton : MonoBehaviour
 	
 	void OnMouseDown()
 	{
+		audio.Play();
 		helpImage.SetActive(true);
 		guiTexture.enabled = false;
 		startButton.guiTexture.enabled = false;

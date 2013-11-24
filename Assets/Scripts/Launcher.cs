@@ -4,6 +4,7 @@ using System.Collections;
 public class Launcher : MonoBehaviour {
 	
 	public float maxStrength = 5f;
+	public float minStrength = 0.5f;
 	public float maxTime = 2f;
 	public bool timed = true;
 	
@@ -15,6 +16,9 @@ public class Launcher : MonoBehaviour {
 	public GameObject fbx;
 	
 	private Capsule _capsule;
+	
+	public AudioClip FXcharge;
+	public AudioClip FXGo;
 	
 	// Use this for initialization
 	void Start () 
@@ -68,8 +72,6 @@ public class Launcher : MonoBehaviour {
 		if (!_engine.enabled) {
 			Vector3 dir = (transform.position-transform.parent.transform.position);
 			dir.Normalize();
-			
-
 		}
 		
 		if (!_engine.enabled || controlsWhenFree)
@@ -92,7 +94,7 @@ public class Launcher : MonoBehaviour {
 				if (timed) 
 				{
 					float t = Mathf.Clamp(Time.time-_timeOrigine,0,maxTime);
-					_strenght = (t/maxTime)*maxStrength;
+					_strenght = minStrength+(t/maxTime)*maxStrength;
 				} 
 				else 
 				{
@@ -102,16 +104,30 @@ public class Launcher : MonoBehaviour {
 				_lineRender.SetPosition(1,transform.position+transform.forward*_strenght);
 			}
 		}
+		
+		if (_lineRender.enabled && !audio.isPlaying)
+		{
+			audio.clip = FXcharge;
+			audio.Play();
+		}
+		if(!_lineRender.enabled)
+		{
+			audio.Stop();
+		}
 	}
 	
 	public void activeEngine(float strenght)
 	{
+		
+		audio.PlayOneShot(FXGo);
+		
 		_lineRender.enabled = false;
 		transform.parent = null;
 		_engine.enabled = true;
 		_engine.speed = _strenght;
 		_capsule.stopDestroy();
 		_capsule.detachFromPlanet();
+		
 	}
 	
 	LineRenderer _lineRender;

@@ -46,6 +46,7 @@ public class Menu : MonoBehaviour
 	void OnMouseDown()
 	{
 		StartGame();
+		audio.Play();
 	}
 	
 	void StartGame()

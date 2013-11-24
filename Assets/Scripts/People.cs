@@ -9,6 +9,7 @@ public class People : MonoBehaviour {
 	
 	private float _speed = 2;
 	public string planetTag = "Planet";
+	
 	public void Awake()
 	{
 		_speed = Random.Range(minSpeed, maxSpeed);
@@ -36,8 +37,10 @@ public class People : MonoBehaviour {
 			Planet o = other.GetComponent<Planet>();
 			if (o != null && o.id == _target.id)
 			{
+				audio.pitch = 0.6f;
+				audio.Play();
 				o.addPeople(1);
-				GameObject.Destroy(this.gameObject);
+				GameObject.Destroy(this.gameObject,1);
 			}
 		}
 	}

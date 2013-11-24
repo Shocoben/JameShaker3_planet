@@ -281,8 +281,12 @@ public class Planet : MonoBehaviour {
 		transform.localScale = new Vector3(size, size, size);
 	}
 	
+	private bool died = false;
 	public void onMaxPeople()
 	{
+		if (died) {
+			return;
+		}
 		for (int i = 0; i < peopleComingToMe.Count; ++i)
 		{
 			peopleComingToMe[i].setTarget(null);
@@ -302,6 +306,8 @@ public class Planet : MonoBehaviour {
 		}
 		GameObject.Destroy(this.gameObject);
 		count--;
+		died = true;
+		Debug.Log ("planet count:" + count);
 	}
 	
 	public float getMassFactor()

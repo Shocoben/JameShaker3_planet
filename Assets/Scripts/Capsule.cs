@@ -11,6 +11,8 @@ public class Capsule : MonoBehaviour {
 	
 	public GameObject explosionFX;
 	
+	public AudioClip FXimminent;
+	
 
 	
 	private Launcher launch;
@@ -111,10 +113,20 @@ public class Capsule : MonoBehaviour {
 	
 	public void stopDestroy()
 	{
+		audio.Stop ();
 		_anim["scaling"].time = 0;
 		_anim.Sample();
-		_anim["scaling"].enabled = false;
-		
+		_anim["scaling"].enabled = false;	
+	}
+	
+	public void playSoundImminent()
+	{
+		audio.PlayOneShot(FXimminent);
+	}
+	
+	public void changePitchImmiment()
+	{
+		audio.pitch += 0.1f;
 	}
 	
 	public void destroy()
