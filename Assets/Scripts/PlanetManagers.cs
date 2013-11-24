@@ -18,6 +18,7 @@ public class PlanetManagers : MonoBehaviour {
 	public string planetTag = "Planet";
 	public Texture2D planetWin;
 	public Texture2D rocketWin;
+	public float waitEndTime = 2f;
 	
 	public float ratioScale = 1.25f;
 	// Use this for initialization
@@ -93,18 +94,20 @@ public class PlanetManagers : MonoBehaviour {
 			rocket.GetComponent<Launcher>().setPadCode(rocketTouches[i].padCode);
 			rocket.GetComponent<Launcher>().setTexture(rocketTouches[i].texture);
 		}
-
+		
+		_finished = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (_state!=State.none) {
+		if (_finished) {
 			return;
 		}
 		
 		if (Capsule.count<=0) {
 			Debug.Log("rocket loose");
-			_state = State.planetWin;
+			_finished = true;
+			StartCoroutine(SetEndState(State.planetWin));
 			return;
 			
 		}
@@ -115,14 +118,20 @@ public class PlanetManagers : MonoBehaviour {
 			GameObject[] s = GameObject.FindGameObjectsWithTag("Sun");
 			if (s.Length>0) {
 				Debug.Log("planet loose sun");
-				_state = State.rocketWin;
+				_finished = true;
+				StartCoroutine(SetEndState(State.rocketWin));
 			}
 		}
 	}
 	
+	IEnumerator SetEndState(State state) {
+ 		yield return new WaitForSeconds(waitEndTime);
+		_state = state;
+    }
+	
 	void OnGUI()
 	{
-		if (_state!=State.none) {		
+		if (_finished && _state!=State.none) {		
 		  GUI.DrawTexture(
 			new Rect(
 				(Screen.width-Screen.width*0.3f)/2,
@@ -141,5 +150,6 @@ public class PlanetManagers : MonoBehaviour {
 	}
 	
 	State _state = State.none;
+	bool _finished = false;
 	
 }
