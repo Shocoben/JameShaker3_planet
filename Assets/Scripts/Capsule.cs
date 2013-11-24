@@ -11,9 +11,13 @@ public class Capsule : MonoBehaviour {
 	
 	public GameObject explosionFX;
 	
+	public AudioClip FXimminent;
+	
 
 	
 	private Launcher launch;
+	
+	public static int count = 0;
 
 	public void resetGeneration()
 	{
@@ -26,6 +30,7 @@ public class Capsule : MonoBehaviour {
 	public int ID =0;
 	void Start()
 	{
+		count++;
 		launch = GetComponent<Launcher>();
 		ID = countInstance;
 		countInstance++;
@@ -108,10 +113,20 @@ public class Capsule : MonoBehaviour {
 	
 	public void stopDestroy()
 	{
+		audio.Stop ();
 		_anim["scaling"].time = 0;
 		_anim.Sample();
-		_anim["scaling"].enabled = false;
-		
+		_anim["scaling"].enabled = false;	
+	}
+	
+	public void playSoundImminent()
+	{
+		audio.PlayOneShot(FXimminent);
+	}
+	
+	public void changePitchImmiment()
+	{
+		audio.pitch += 0.1f;
 	}
 	
 	public void destroy()
@@ -119,6 +134,10 @@ public class Capsule : MonoBehaviour {
 		GameObject explosion = Instantiate(explosionFX, transform.position, transform.rotation) as GameObject;
 		explosion.transform.parent = attachedPlanet.transform;
 		GameObject.Destroy(this.gameObject);
+		if (Camera.main.GetComponent<ShakePosition>()!=null) {
+			Camera.main.GetComponent<ShakePosition>().Shake(0.5f);
+		}
+		count--;
 	}
 	
 	public void setAttachedPlanet(Planet planet)

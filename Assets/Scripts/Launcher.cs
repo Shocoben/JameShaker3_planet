@@ -17,6 +17,9 @@ public class Launcher : MonoBehaviour {
 	
 	private Capsule _capsule;
 	
+	public AudioClip FXcharge;
+	public AudioClip FXGo;
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -62,13 +65,13 @@ public class Launcher : MonoBehaviour {
 		fbx.renderer.material.SetTexture("_MainTex", texture);
 	}
 	
+	public float ratioScaleDiffPos = 0.20f;
 	// Update is called once per frame
 	void Update () 
 	{
 		if (!_engine.enabled) {
 			Vector3 dir = (transform.position-transform.parent.transform.position);
 			dir.Normalize();
-			transform.position = transform.parent.transform.position + (dir * transform.parent.transform.localScale.x * .5f) + (dir * transform.localScale.x*0.25f);
 		}
 		
 		if (!_engine.enabled || controlsWhenFree)
@@ -76,7 +79,6 @@ public class Launcher : MonoBehaviour {
 			if (Input.GetKeyUp(_letter) || Input.GetKeyUp(padCode)) 
 			{
 				activeEngine(_strenght);
-				
 				
 			} 
 			else if (Input.GetKeyDown(_letter) || Input.GetKeyDown(padCode))
@@ -102,16 +104,30 @@ public class Launcher : MonoBehaviour {
 				_lineRender.SetPosition(1,transform.position+transform.forward*_strenght);
 			}
 		}
+		
+		if (_lineRender.enabled && !audio.isPlaying)
+		{
+			audio.clip = FXcharge;
+			audio.Play();
+		}
+		if(!_lineRender.enabled)
+		{
+			audio.Stop();
+		}
 	}
 	
 	public void activeEngine(float strenght)
 	{
+		
+		audio.PlayOneShot(FXGo);
+		
 		_lineRender.enabled = false;
 		transform.parent = null;
 		_engine.enabled = true;
 		_engine.speed = _strenght;
 		_capsule.stopDestroy();
 		_capsule.detachFromPlanet();
+		
 	}
 	
 	LineRenderer _lineRender;

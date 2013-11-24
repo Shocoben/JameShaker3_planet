@@ -8,10 +8,10 @@ public class ShakePosition : MonoBehaviour {
 	public float shakeTime = 1;
 	
 	// Use this for initialization
-	void Shake () {
+	public void Shake (float factor=1f) {
 	    Hashtable ht = new Hashtable();
-	    ht.Add("x",shakeX);
-	    ht.Add("y",shakeY);
+	    ht.Add("x",shakeX*factor);
+	    ht.Add("y",shakeY*factor);
 	    ht.Add("time",shakeTime);
 	    iTween.ShakePosition(gameObject, ht);	
 	}
