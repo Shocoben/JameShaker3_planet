@@ -266,7 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: .5
   lastGeneration: 0
-  peoplePerGeneration: 1
+  peoplePerGeneration: 2
   explosionFX: {fileID: 100008, guid: 8a7424826f320f34a92d6558daa2188f, type: 2}
   ID: 0
   rayDistance: 100
