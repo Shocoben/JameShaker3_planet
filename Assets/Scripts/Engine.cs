@@ -45,9 +45,10 @@ public class Engine : MonoBehaviour {
 				continue;
 			float d = Vector3.Distance(transform.position,p.gameObject.transform.position);
 			if (d<p.UpdateDistanceEffect()) {
-	 	 		Vector3 relativePos = transform.position - p.gameObject.transform.position;
+	 	 		/*Vector3 relativePos = transform.position - p.gameObject.transform.position;
         		Quaternion rotation = Quaternion.LookRotation(relativePos);
-        		transform.rotation = Quaternion.Lerp(transform.rotation,rotation,Time.deltaTime*0.5f);				
+        		transform.rotation = Quaternion.Lerp(transform.rotation,rotation,Time.deltaTime*0.5f);*/			
+				transform.Translate(-Vector3.right * speed * Time.deltaTime * 10);
 			}
 		}
 		
