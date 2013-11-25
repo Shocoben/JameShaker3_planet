@@ -223,8 +223,9 @@ public class Planet : MonoBehaviour {
 		_attachedRockets.Clear();
 
         //instantiate explosion
-		Instantiate(explosionFX, transform.position, Quaternion.Euler(Vector3.right * 90) );
-		if (Camera.main.GetComponent<ShakePosition>()!=null) {
+		Instantiate(explosionFX, transform.position, explosionFX.transform.rotation );
+		if (Camera.main.GetComponent<ShakePosition>()!=null) 
+        {
 			Camera.main.GetComponent<ShakePosition>().Shake();
 		}
 		GameObject.Destroy(this.gameObject);
