@@ -35,7 +35,7 @@ public class People : MonoBehaviour {
 		if (other.tag == planetTag || other.tag == sunTag)
 		{
 			Planet o = other.GetComponent<Planet>();
-			if (o != null && o.id == _target.id)
+			if (o != null && o.getID() == _target.getID())
 			{
 				audio.pitch = 0.6f;
 				audio.Play();

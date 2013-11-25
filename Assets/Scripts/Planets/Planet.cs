@@ -4,78 +4,62 @@ using System.Collections.Generic;
 
 public class Planet : MonoBehaviour {
 	
+    //Physic
 	public float distanceEffect = 2;
 	public float baseMassFactor = 10;
 	
-	
-	private TextMesh letterText;
-	private TextMesh percentText;
-	public KeyCode letter;
-	
-	public GameObject explosionFX;
-	
-	
-	public static Planet selected = null;
-	public static int instanceCount = 0;
-	public int id = 0;
 
-	private int _people;
+	public GameObject explosionFX;
+
+    //People stuff
+	private int _peopleCount;
 	public int peopleStart = 1;
 	public GameObject peoplePrefab;
-	
+    private List<People> peopleComingToMe = new List<People>();
+
+    //Objectives
 	private float minSize = 1;
 	public float maxPeople = 5;
 	public float maxRadius = 1.5f;
-	
-	private List<People> peopleComingToMe = new List<People>();
-	
-	private float _percentPeople = 0;
-	public float peopleSelectSpeed = 3;
-	
-	public int minimPeopleToExplodeRocket = 1;
-	
-	public GameObject pLetterPrefab;
-	public GameObject pPercentPrefab;
-	
+    public int minimPeopleToExplodeRocket = 1;
+    
+    //atmosphere
 	public Atmosphere atmosphere;
 	
-	public float sizeFactor = 0.2f;
-	public bool showLetter = false;
-	
-	public static int count = 0;
-	
+	//Graphic changes
 	public GameObject graphicFBX;
+    public Color selectColor = Color.white;
+    public Color unselectColor = Color.black;
+    public float outlineWidth = 5;
+
+    //Identification
+    public static int aliveCount = 0;
+    public static int instanceCount = 0;
+    public static Planet selected = null;
+    private int _ID = 0;
+
+    //rocket stuff
+    private List<Capsule> _attachedRockets = new List<Capsule>();
+
+    //People transfer stuff
+    public int nbrPeopleSentPerRate;
+    public float sendRate = 1;
+    private float lastSent;
+
+    public int getID()
+    {
+        return _ID;
+    }
+
 	void Start()
 	{
-		count++;
+		aliveCount++;
 		atmosphere = GetComponentInChildren<Atmosphere>();
 		
 		minSize = transform.localScale.x;
-		id = instanceCount;
+		_ID = instanceCount;
 		instanceCount ++;
-		_people = peopleStart;
-		
-		if (showLetter)
-		{
-			GameObject pLetter = GameObject.Instantiate(pLetterPrefab, Vector3.zero, pLetterPrefab.transform.rotation) as GameObject;
-			pLetter.GetComponent<SnapObject>().oToSnap = this.transform;
-			letterText = pLetter.GetComponent<TextMesh>();
-			if (letter != null && letterText != null)
-				letterText.text = letter.ToString();
-			
-			GameObject pPercent = GameObject.Instantiate(pPercentPrefab, Vector3.zero, pPercentPrefab.transform.rotation) as GameObject;
-			pPercent.GetComponent<SnapObject>().oToSnap = this.transform;
-			percentText = pPercent.GetComponent<TextMesh>();
-			
-	
-			
-			if (pPercent != null)
-			{
-				pPercent.SetActive(false);	
-			}
-		}
-		
-		
+		_peopleCount = peopleStart;
 
 		resizeWithPeople();
 	}
@@ -99,7 +83,7 @@ public class Planet : MonoBehaviour {
 		//Debug.DrawLine(ray.origin, ray.origin + ray.direction * rayDistance, Color.green, 1.5f);
 		if (Physics.Raycast(ray, out hit, rayDistance, rayMask.value))
 		{
-			if (hit.collider.gameObject.GetComponent<Planet>().id == id)
+			if (hit.collider.gameObject.GetComponent<Planet>()._ID == _ID)
 				return true;
 			return false;
 		}
@@ -109,7 +93,7 @@ public class Planet : MonoBehaviour {
 	
 	public bool canDestroyRocket()
 	{
-		return _people >= minimPeopleToExplodeRocket;
+		return _peopleCount >= minimPeopleToExplodeRocket;
 	}
 	
 	public virtual void Update()
@@ -124,14 +108,14 @@ public class Planet : MonoBehaviour {
 			{
 				if (selected == null)
 				{
-					selected = this;
+					
 					onSelect();
 				}
 			}
 		}
 		else if ( Input.GetMouseButton(0) )
 		{
-			if (mouseTouchMe() && selected != null && selected.id != id)
+			if (mouseTouchMe() && selected != null && selected._ID != _ID)
 			{
 				selected.sendPeopleTo(this);	
 			}
@@ -142,93 +126,25 @@ public class Planet : MonoBehaviour {
 			selected = null;
 		}
 		
-		
-		/*
-		if (Input.GetKeyDown(letter))
-		{
-			if (selected == null)
-			{
-				selected = this;
-				
-			}
-			else
-			{
-				if (selected.id == id)
-				{
-					selected = null; 
-					return;
-				}
-				else
-				{
-					selected.sendPeopleTo(this);
-					selected.onDeselect();	
-					selected = null;
-				}
-			}
-		}
-		
-		
-		if (selected != null && selected.id == id)
-		{
-			if (Input.GetKeyDown(KeyCode.Space))
-			{
-				_percentPeople = 0;
-				percentText.gameObject.SetActive(true);
-			}
-			else if (Input.GetKey(KeyCode.Space))
-			{
-				if (_people > 1)
-				{
-					_percentPeople += peopleSelectSpeed * Time.deltaTime;
-				}
-				else
-				{
-					_percentPeople = 100;
-				}
-			}
-			else if (Input.GetKeyUp(KeyCode.Space))
-			{
-				_percentPeople = 0;
-				percentText.gameObject.SetActive(false);
-			}
-			
-			if (_percentPeople > 100)
-			{
-				_percentPeople = 100;	
-			}
-		}
-		
-		if (percentText != null)
-		{
-			percentText.text = Mathf.Floor(_percentPeople) + "%";
-		}
-		*/
 	}
 	
 	
 	
 	public void onDeselect()
-	{
-		if (percentText)
-			percentText.gameObject.SetActive(false);
-		_percentPeople = 0;
-		
+	{		
 		graphicFBX.renderer.material.SetColor("_OutlineColor", unselectColor);
 		graphicFBX.renderer.material.SetFloat("_Outline", 0);
 	}
 	
-	public Color selectColor = Color.white;
-	public Color unselectColor = Color.black;
-	public float outlineWidth = 5;
+
 	public void onSelect()
 	{
+        selected = this;
 		graphicFBX.renderer.material.SetColor("_OutlineColor", selectColor);
 		graphicFBX.renderer.material.SetFloat("_Outline", outlineWidth);
 	}
 	
-	public int nbrPeopleSentPerRate;
-	public float sendRate = 1;
-	private float lastSent;
+
 	
 	public void resetLastSent()
 	{
@@ -241,8 +157,8 @@ public class Planet : MonoBehaviour {
 		{
 			return;
 		}
-		//int nbrPeople = Mathf.FloorToInt(_people * (_percentPeople / 100));
-		int nbrPeople = (_people < nbrPeopleSentPerRate)? _people :  nbrPeopleSentPerRate;
+
+		int nbrPeople = (_peopleCount < nbrPeopleSentPerRate)? _peopleCount :  nbrPeopleSentPerRate;
 		for (int i = 0; i < nbrPeople; ++i)
 		{
 			Vector3 direction = objectiv.transform.position - transform.position;
@@ -253,7 +169,6 @@ public class Planet : MonoBehaviour {
 			nPol.setTarget(objectiv);
 		}
 		
-		_percentPeople = 0;
 		addPeople(-nbrPeople);
 		resetLastSent();
 	}
@@ -261,13 +176,13 @@ public class Planet : MonoBehaviour {
 	
 	public void addPeople(int nbr)
 	{
-		_people += nbr;
-		if (_people < 0)
+		_peopleCount += nbr;
+		if (_peopleCount < 0)
 		{
-			_people = 0;	
+			_peopleCount = 0;	
 		}
 		
-		if (_people > maxPeople)
+		if (_peopleCount > maxPeople)
 		{
 			onMaxPeople();
 		}
@@ -277,46 +192,51 @@ public class Planet : MonoBehaviour {
 	
 	public void resizeWithPeople()
 	{
-		float size = minSize + (maxRadius - minSize) * _people / maxPeople;
+		float size = minSize + (maxRadius - minSize) * _peopleCount / maxPeople;
 		transform.localScale = new Vector3(size, size, size);
 	}
 	
-	private bool died = false;
+	private bool _died = false;
 	public void onMaxPeople()
 	{
-		if (died) {
+		if (_died) {
 			return;
 		}
+        _died = true;
+
+        //detach people
 		for (int i = 0; i < peopleComingToMe.Count; ++i)
 		{
 			peopleComingToMe[i].setTarget(null);
 		}
 		peopleComingToMe.Clear();
 		
-		Capsule[] rocketsToDetach = new Capsule[attachedRockets.Count];
-		attachedRockets.CopyTo(rocketsToDetach);
+        //Detatch rockets
+		Capsule[] rocketsToDetach = new Capsule[_attachedRockets.Count];
+		_attachedRockets.CopyTo(rocketsToDetach);
 		for (int j = 0; j < rocketsToDetach.Length; ++j)
 		{
+            if (rocketsToDetach[j] == null ||rocketsToDetach[j].isDead())
+                continue;
 			rocketsToDetach[j].startUrgenceEngine();
 		}
-		attachedRockets.Clear();
+		_attachedRockets.Clear();
+
+        //instantiate explosion
 		Instantiate(explosionFX, transform.position, Quaternion.Euler(Vector3.right * 90) );
 		if (Camera.main.GetComponent<ShakePosition>()!=null) {
 			Camera.main.GetComponent<ShakePosition>().Shake();
 		}
 		GameObject.Destroy(this.gameObject);
-		count--;
-		died = true;
-		Debug.Log ("planet count:" + count);
+		aliveCount--;
 	}
 	
 	public float getMassFactor()
 	{
-		return baseMassFactor * (1 + _people);
+		return baseMassFactor * (1 + _peopleCount);
 	}
 	
-	public List<Capsule> attachedRockets = new List<Capsule>();
-	public LayerMask planetMask;
+	
 	
 	void OnTriggerEnter(Collider other)
 	{
@@ -343,13 +263,13 @@ public class Planet : MonoBehaviour {
 	
 	public void attachRocket(Capsule rocket)
 	{
-		attachedRockets.Add(rocket);	
+		_attachedRockets.Add(rocket);	
 	}
 	
 	public void detachRocket(Capsule rocket)
 	{
-		if (attachedRockets.Contains(rocket))
-			attachedRockets.Remove(rocket);
+		if (_attachedRockets.Contains(rocket))
+			_attachedRockets.Remove(rocket);
 	}
 	
 }

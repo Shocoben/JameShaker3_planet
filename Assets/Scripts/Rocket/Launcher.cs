@@ -118,7 +118,8 @@ public class Launcher : MonoBehaviour {
 	
 	public void activeEngine(float strenght)
 	{
-		
+        if (_capsule.isDead())
+            return;
 		audio.PlayOneShot(FXGo);
 		
 		_lineRender.enabled = false;

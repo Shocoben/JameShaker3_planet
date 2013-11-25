@@ -109,17 +109,16 @@ public class PlanetManagers : MonoBehaviour {
 		}
 		
 		if (Capsule.count<=0) {
-			Debug.Log("rocket loose");
 			_finished = true;
 			StartCoroutine(SetEndState(State.planetWin));
 			return;
 			
 		}
-		if (Planet.count<=0) {
+		if (Planet.aliveCount<=0) {
 			Debug.Log("planet loose");
 			_finished = true;
 			_state = State.rocketWin;
-		} else if (Planet.count==1) {
+		} else if (Planet.aliveCount==1) {
 			GameObject[] s = GameObject.FindGameObjectsWithTag("Sun");
 			if (s.Length>0) {
 				Debug.Log("planet loose sun");

@@ -12,13 +12,17 @@ public class Capsule : MonoBehaviour {
 	public GameObject explosionFX;
 	
 	public AudioClip FXimminent;
-	
-
-	
 	private Launcher launch;
-	
 	public static int count = 0;
 
+    public float urgenceLaunchStrength = 2;
+
+    private bool _died = false;
+
+    public bool isDead()
+    {
+        return _died;
+    }
 	public void resetGeneration()
 	{
 		lastGeneration = Time.time;
@@ -28,6 +32,8 @@ public class Capsule : MonoBehaviour {
 	private Animation _anim;
 	private static int countInstance = 0;
 	public int ID =0;
+    private float _startPitch = 0;
+
 	void Start()
 	{
 		count++;
@@ -36,6 +42,7 @@ public class Capsule : MonoBehaviour {
 		countInstance++;
 		_anim = GetComponent<Animation>();
 		_anim["jumpingPeople"].speed = rate;
+        _startPitch = audio.pitch;
 	}
 	
 	public float rayDistance = 100;
@@ -61,17 +68,15 @@ public class Capsule : MonoBehaviour {
 	
 	void Update ()
 	{
-		
-
 		if (!_isDestroying && attachedPlanet != null && attachedPlanet.canDestroyRocket() && Input.GetMouseButtonDown(0) && mouseTouchMe() )
 		{
 			startDestroy();
 		}
 		
-			
 		if (_isDestroying && Input.GetMouseButtonUp(0))
 		{
-			_isDestroying = false;
+            _isDestroying = false;
+            stopDestroy();
 		}
 		
 		if (_isDestroying && !mouseTouchMe())
@@ -82,7 +87,6 @@ public class Capsule : MonoBehaviour {
 		
 		if (_isDestroying && mouseTouchMe())
 		{
-			startDestroy();
 			_currentDestroyTime -= Time.deltaTime;
 		}
 		
@@ -113,10 +117,13 @@ public class Capsule : MonoBehaviour {
 	
 	public void stopDestroy()
 	{
+        audio.pitch = _startPitch;
 		audio.Stop ();
 		_anim["scaling"].time = 0;
 		_anim.Sample();
-		_anim["scaling"].enabled = false;	
+		_anim["scaling"].enabled = false;
+        
+        
 	}
 	
 	public void playSoundImminent()
@@ -131,6 +138,10 @@ public class Capsule : MonoBehaviour {
 	
 	public void destroy()
 	{
+        if (_died)
+            return;
+        _died = true;
+
 		GameObject explosion = Instantiate(explosionFX, transform.position, transform.rotation) as GameObject;
 		explosion.transform.parent = attachedPlanet.transform;
 		GameObject.Destroy(this.gameObject);
@@ -152,7 +163,8 @@ public class Capsule : MonoBehaviour {
 		}
 	}
 	
-	public float urgenceLaunchStrength = 2;
+	
+   
 	public void detachFromPlanet()
 	{
 		if (attachedPlanet != null)
