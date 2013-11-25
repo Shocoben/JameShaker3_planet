@@ -66,6 +66,7 @@ public class Launcher : MonoBehaviour {
 	}
 	
 	public float ratioScaleDiffPos = 0.20f;
+
 	// Update is called once per frame
 	void Update () 
 	{
@@ -79,7 +80,7 @@ public class Launcher : MonoBehaviour {
 			if (Input.GetKeyUp(_letter) || Input.GetKeyUp(padCode)) 
 			{
 				activeEngine(_strenght);
-				
+                audio.Stop();
 			} 
 			else if (Input.GetKeyDown(_letter) || Input.GetKeyDown(padCode))
 			{
@@ -88,6 +89,8 @@ public class Launcher : MonoBehaviour {
 				_lineRender.SetPosition(1,transform.position );
 				_strenghtOrigine = Input.mousePosition.y;
 				_timeOrigine = Time.time;
+                audio.clip = FXcharge;
+                audio.Play();
 			}
 			else if (Input.GetKey(_letter) || Input.GetKey(padCode))
 			{
@@ -103,16 +106,6 @@ public class Launcher : MonoBehaviour {
 				_lineRender.SetPosition(0,transform.position);
 				_lineRender.SetPosition(1,transform.position+transform.forward*_strenght);
 			}
-		}
-		
-		if (_lineRender.enabled && !audio.isPlaying)
-		{
-			audio.clip = FXcharge;
-			audio.Play();
-		}
-		if(!_lineRender.enabled)
-		{
-			audio.Stop();
 		}
 	}
 	

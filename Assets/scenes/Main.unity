@@ -177,7 +177,7 @@ MonoBehaviour:
   graphicFBX: {fileID: 380255519}
   selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
   unselectColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: .0500000007
+  outlineWidth: .00499999989
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   rayDistance: 100
@@ -323,6 +323,7 @@ GameObject:
   - 33: {fileID: 107881912}
   - 64: {fileID: 107881911}
   - 23: {fileID: 107881910}
+  - 114: {fileID: 107881909}
   m_Layer: 0
   m_Name: Quad
   m_TagString: Untagged
@@ -341,6 +342,17 @@ Transform:
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 1763861833}
+--- !u!114 &107881909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 107881907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1995beac27fb724fab729f82072b7c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &107881910
 Renderer:
   m_ObjectHideFlags: 0
@@ -738,7 +750,7 @@ MonoBehaviour:
   graphicFBX: {fileID: 1102520067}
   selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
   unselectColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: .0500000007
+  outlineWidth: .00499999989
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   rayDistance: 100
@@ -3185,7 +3197,7 @@ MonoBehaviour:
   graphicFBX: {fileID: 1523279838}
   selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
   unselectColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: .0500000007
+  outlineWidth: .00499999989
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   rayDistance: 100
@@ -3536,7 +3548,7 @@ MonoBehaviour:
   graphicFBX: {fileID: 1946200619}
   selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
   unselectColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: .0500000007
+  outlineWidth: .00499999989
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   rayDistance: 100
@@ -4026,7 +4038,7 @@ MonoBehaviour:
   graphicFBX: {fileID: 507077066}
   selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
   unselectColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: .0500000007
+  outlineWidth: .00499999989
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   rayDistance: 100
@@ -4178,7 +4190,7 @@ MonoBehaviour:
   graphicFBX: {fileID: 321837884}
   selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
   unselectColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: .0500000007
+  outlineWidth: .00499999989
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   rayDistance: 100
@@ -4494,7 +4506,7 @@ MonoBehaviour:
   graphicFBX: {fileID: 491709357}
   selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
   unselectColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: .0500000007
+  outlineWidth: .00499999989
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   rayDistance: 100
@@ -4958,7 +4970,7 @@ Camera:
   near clip plane: .300000012
   far clip plane: 10
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 4.5
   m_Depth: -1
   m_CullingMask:
@@ -5485,7 +5497,7 @@ MonoBehaviour:
   graphicFBX: {fileID: 1071231104}
   selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
   unselectColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: .0500000007
+  outlineWidth: .00499999989
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   rayDistance: 100
@@ -6469,7 +6481,7 @@ MonoBehaviour:
   graphicFBX: {fileID: 1685628710}
   selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
   unselectColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: .0500000007
+  outlineWidth: .00499999989
   nbrPeopleSentPerRate: 5
   sendRate: .100000001
   rayDistance: 100

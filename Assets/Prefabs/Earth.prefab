@@ -153,7 +153,7 @@ MonoBehaviour:
   graphicFBX: {fileID: 100002}
   selectColor: {r: .992156863, g: 1, b: .258823544, a: .733333349}
   unselectColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: .0500000007
+  outlineWidth: .00499999989
   nbrPeopleSentPerRate: 2
   sendRate: .100000001
   rayDistance: 100

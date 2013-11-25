@@ -65,23 +65,20 @@ public class Capsule : MonoBehaviour {
 	private bool _isDestroying = false;
 	public float _destroyTime = 1;
 	private float _currentDestroyTime = 1;
-	
+    public bool destroyOnlyOnMouseDown = false;
+
+
 	void Update ()
 	{
-		if (!_isDestroying && attachedPlanet != null && attachedPlanet.canDestroyRocket() && Input.GetMouseButtonDown(0) && mouseTouchMe() )
+        bool inputToStartDestroy = (destroyOnlyOnMouseDown)? Input.GetMouseButtonDown(0) : Input.GetMouseButton(0);
+
+		if (!_isDestroying && attachedPlanet != null && attachedPlanet.canDestroyRocket() && inputToStartDestroy && mouseTouchMe() )
 		{
 			startDestroy();
 		}
 		
-		if (_isDestroying && Input.GetMouseButtonUp(0))
-		{
-            _isDestroying = false;
-            stopDestroy();
-		}
-		
 		if (_isDestroying && !mouseTouchMe())
 		{
-			_currentDestroyTime = _destroyTime;
 			stopDestroy();
 		}
 		
@@ -112,7 +109,7 @@ public class Capsule : MonoBehaviour {
 		_isDestroying = true;
 		_anim["scaling"].enabled = true;
 		_anim.Play("scaling");
-		
+        _currentDestroyTime = _destroyTime;
 	}
 	
 	public void stopDestroy()
@@ -122,8 +119,8 @@ public class Capsule : MonoBehaviour {
 		_anim["scaling"].time = 0;
 		_anim.Sample();
 		_anim["scaling"].enabled = false;
-        
-        
+        _currentDestroyTime = _destroyTime;
+        _isDestroying = false;
 	}
 	
 	public void playSoundImminent()
@@ -142,8 +139,12 @@ public class Capsule : MonoBehaviour {
             return;
         _died = true;
 
-		GameObject explosion = Instantiate(explosionFX, transform.position, transform.rotation) as GameObject;
-		explosion.transform.parent = attachedPlanet.transform;
+        GameObject explosion = Instantiate(explosionFX, transform.position, transform.rotation) as GameObject;
+        if (attachedPlanet != null)
+        {
+            explosion.transform.parent = attachedPlanet.transform;
+        }
+	
 		GameObject.Destroy(this.gameObject);
 		if (Camera.main.GetComponent<ShakePosition>()!=null) {
 			Camera.main.GetComponent<ShakePosition>().Shake(0.5f);
