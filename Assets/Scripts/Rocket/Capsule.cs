@@ -144,7 +144,6 @@ public class Capsule : MonoBehaviour {
         {
             explosion.transform.parent = attachedPlanet.transform;
         }
-	
 		GameObject.Destroy(this.gameObject);
 		if (Camera.main.GetComponent<ShakePosition>()!=null) {
 			Camera.main.GetComponent<ShakePosition>().Shake(0.5f);

@@ -490,6 +490,10 @@ Prefab:
       propertyPath: nbrPeopleSentPerRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: explosionFX
+      value: 
+      objectReference: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 2049225626}
@@ -602,6 +606,10 @@ Prefab:
       propertyPath: nbrPeopleSentPerRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: explosionFX
+      value: 
+      objectReference: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 763270706}
@@ -740,7 +748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceEffect: 2
   baseMassFactor: 10
-  explosionFX: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
+  explosionFX: {fileID: 100010, guid: 222a7c26bf3a7ec4d8b0ac36a3d764dc, type: 2}
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
   maxPeople: 50
@@ -1308,6 +1316,10 @@ Prefab:
       propertyPath: nbrPeopleSentPerRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: explosionFX
+      value: 
+      objectReference: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 1498185811}
@@ -2863,6 +2875,10 @@ Prefab:
       propertyPath: nbrPeopleSentPerRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: explosionFX
+      value: 
+      objectReference: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -2968,6 +2984,10 @@ Prefab:
       propertyPath: nbrPeopleSentPerRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: explosionFX
+      value: 
+      objectReference: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 1872903283}
@@ -3486,6 +3506,10 @@ Prefab:
       propertyPath: nbrPeopleSentPerRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: explosionFX
+      value: 
+      objectReference: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 926972951}
@@ -4028,7 +4052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceEffect: 2
   baseMassFactor: 10
-  explosionFX: {fileID: 100008, guid: 8a7424826f320f34a92d6558daa2188f, type: 2}
+  explosionFX: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
   peopleStart: 0
   peoplePrefab: {fileID: 100000, guid: c8e5bae8b441cb04da15e55b4ecc6b14, type: 2}
   maxPeople: 50
@@ -4443,6 +4467,10 @@ Prefab:
       propertyPath: nbrPeopleSentPerRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: explosionFX
+      value: 
+      objectReference: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
@@ -5012,7 +5040,7 @@ AudioSource:
   m_GameObject: {fileID: 1710955196}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 535295db00c1e2b49b691dd1b6f55c48, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c25ff44420d330d4f834d2643e089db5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .699999988
   m_Pitch: 1
@@ -5863,6 +5891,10 @@ Prefab:
       propertyPath: nbrPeopleSentPerRate
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
+      propertyPath: explosionFX
+      value: 
+      objectReference: {fileID: 100010, guid: 222a7c26bf3a7ec4d8b0ac36a3d764dc, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
   m_RootGameObject: {fileID: 187401192}
@@ -6092,7 +6124,7 @@ Prefab:
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: explosionFX
       value: 
-      objectReference: {fileID: 100008, guid: 8a7424826f320f34a92d6558daa2188f, type: 2}
+      objectReference: {fileID: 100008, guid: f9029d1696aafca4988d528693016010, type: 2}
     - target: {fileID: 11400008, guid: 43b03c9edcec8bd44bfe819a05126ac9, type: 2}
       propertyPath: maxPeople
       value: 50

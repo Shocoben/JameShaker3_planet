@@ -329,7 +329,7 @@ MonoBehaviour:
   rate: 5
   lastGeneration: 0
   peoplePerGeneration: 1
-  explosionFX: {fileID: 100008, guid: 8a7424826f320f34a92d6558daa2188f, type: 2}
+  explosionFX: {fileID: 100010, guid: 222a7c26bf3a7ec4d8b0ac36a3d764dc, type: 2}
   FXimminent: {fileID: 8300000, guid: 8123a07ad3391a9459f9b02d3603abd6, type: 3}
   urgenceLaunchStrength: 10
   ID: 0
@@ -338,6 +338,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   _destroyTime: .5
+  destroyOnlyOnMouseDown: 0
   people: {fileID: 100006}
 --- !u!114 &11400006
 MonoBehaviour:
